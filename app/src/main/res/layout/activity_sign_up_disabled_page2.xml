@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpDisabledPage2">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo1" />
+
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="Disability Type"
+        android:text="Disability Type"
+        android:textColor="#3884A7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Select your disability type that you need volunteers for."
+        android:text="Select your disability type that you need volunteers for."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Hint: Mobility and physical impariments, Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
+        android:text="Hint: Mobility and physical impairments, Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="403dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/chk_readingEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Deaf or Hard Hearing"
+                android:text="Deaf or Hard Hearing"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_readingArabic"
+                app:layout_constraintTop_toBottomOf="@+id/chk_readingArabic" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="36dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic"
+                app:srcCompat="@drawable/vision" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="37dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic"
+                app:srcCompat="@drawable/reading" />
+
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="36dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish"
+                app:srcCompat="@drawable/deaf" />
+
+            <CheckBox
+                android:id="@+id/chk_writingArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Vision Impairments"
+                android:text="Vision Impairments"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_readingEnglish"
+                app:layout_constraintTop_toBottomOf="@+id/chk_readingEnglish" />
+
+
+            <Button
+                android:id="@+id/btn_DetailsWritingArb"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button details read in english"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic" />
+
+            <Button
+                android:id="@+id/btn_DetailsReadingEng"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button details reading in english"
+                android:text="Details"
+                android:textColor="#F8F8F8"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish" />
+
+            <Button
+                android:id="@+id/btn_DetailsReadingArb"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button details reading in arabic"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic" />
+
+
+            <CheckBox
+                android:id="@+id/chk_readingArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="Mobility and Physical Impairments"
+                android:text="Mobility and Physical\nImpairments"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/aaaa"
+        android:contentDescription="Sign up Button"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBackSignUpDisabledPage1"
+
+
+        android:layout_width="59dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="7dp"
+        android:background="?attr/actionModeCloseDrawable"
+        android:backgroundTint="#3884A7"
+        android:contentDescription="back "
+        android:textSize="24dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView27"
+        app:layout_constraintEnd_toStartOf="@+id/textView27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="Fill Information"
+        android:text="Fill Information"
+        android:textAlignment="center"
+        android:textColor="#3884A7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonBackSignUpDisabledPage1" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginBottom="226dp"
+        android:contentDescription="Accept help from males"
+        android:text="Accept help from males"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="194dp"
+        android:contentDescription="Accept help from females"
+        android:text="Accept help from females"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="30dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"
+        app:srcCompat="@drawable/male" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="30dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2"
+        app:srcCompat="@drawable/female" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
