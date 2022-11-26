@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="Skills"
+        android:text="Skills"
+        android:textColor="#3884A7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="375dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Choose the abilities you believe you have mastered."
+        android:text="Choose the abilities you believe you have mastered."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="366dp"
+        android:layout_height="52dp"
+        android:text="For example: Choose Reading in Arabic, if you are a proficient Arabic reader."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="403dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/chk_readingEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Reading in Englsh"
+                android:text="Reading in Englsh"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_readingArabic"
+                app:layout_constraintTop_toBottomOf="@+id/chk_readingArabic" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="36dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic"
+                app:srcCompat="@drawable/hand" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="37dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic"
+                app:srcCompat="@drawable/reading" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="132dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish"
+                app:srcCompat="@drawable/hand" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="36dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="132dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_helpmate"
+                app:srcCompat="@drawable/weel" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="36dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish"
+                app:srcCompat="@drawable/reading" />
+
+            <CheckBox
+                android:id="@+id/chk_writingArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Writing in Arabic"
+                android:text="Writing in Arabic"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_readingEnglish"
+                app:layout_constraintTop_toBottomOf="@+id/chk_readingEnglish" />
+
+            <CheckBox
+                android:id="@+id/chk_writingEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Writing in English"
+                android:text="Writing in English"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_writingArabic"
+                app:layout_constraintTop_toBottomOf="@+id/chk_writingArabic" />
+
+            <Button
+                android:id="@+id/btn_DetailsWritingArb"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button details read in english"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic" />
+
+            <Button
+                android:id="@+id/btn_DetailsReadingEng"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button details reading in english"
+                android:text="Details"
+                android:textColor="#F8F8F8"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish" />
+
+            <Button
+                android:id="@+id/btn_DetailsReadingArb"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button details reading in arabic"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic" />
+
+            <Button
+                android:id="@+id/btn_DetailsHelpMate"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button detals being a helmate"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_helpmate" />
+
+            <Button
+                android:id="@+id/btn_DetailsWritingEng"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#3884A7"
+                android:contentDescription="button detalis writing in english"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish" />
+
+            <CheckBox
+                android:id="@+id/chk_helpmate"
+                android:layout_width="183dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="Being a helmate"
+                android:minHeight="48dp"
+                android:text="Being a helmate"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_writingEnglish"
+                app:layout_constraintTop_toBottomOf="@+id/chk_writingEnglish" />
+
+            <CheckBox
+                android:id="@+id/chk_readingArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="Reading in Arabic "
+                android:text="Reading in Arabic "
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="29dp"
+        android:background="#3884A7"
+        android:contentDescription="Sign up Button"
+        android:text="Save changes"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="338dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="24dp"
+        android:background="#3884A7"
+        android:contentDescription="Sign up Button"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save"
+        app:layout_constraintVertical_bias="0.26" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

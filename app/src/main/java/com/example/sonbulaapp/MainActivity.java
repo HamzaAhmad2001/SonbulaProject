@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,30 +17,11 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button btn;
+        Button btn2;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        buttonSignup=findViewById(R.id.buttonSignUp);
-        buttonSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSignUpPage();
-            }
-            public void openSignUpPage()
-            {
-                Intent intent = new Intent(MainActivity.this,SignUpPage.class);
-                startActivity(intent);
-            }
-        });
 
-        textViewLogin=findViewById(R.id.textViewLogIn);
-        textViewLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentLogIn =new Intent(MainActivity.this,LogInPage.class);
-                startActivity(intentLogIn);
 
-            }
-        });
-
-    }
+}
 }
