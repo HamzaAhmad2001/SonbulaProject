@@ -11,7 +11,7 @@
     android:paddingRight="35dp"
     android:paddingBottom="35dp"
     tools:context=".MainActivity">
-
+//
 
     <ImageView
         android:contentDescription="Snbula Application Logo"
