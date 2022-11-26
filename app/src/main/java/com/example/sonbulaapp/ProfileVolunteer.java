@@ -2,7 +2,10 @@ package com.example.sonbulaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -13,9 +16,8 @@ import java.util.List;
 
 public class ProfileVolunteer extends AppCompatActivity   {
 
-    EditProfile ed = new EditProfile();
 
-
+private Button btn_editProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,16 @@ public class ProfileVolunteer extends AppCompatActivity   {
         setContentView(R.layout.activity_profile_volunteer);
 
         setSkillsList();
+
+        btn_editProfile=findViewById(R.id.btn_editProfile);
+
+        this.btn_editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileVolunteer.this, ProfileVolunteer.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -74,14 +86,7 @@ public class ProfileVolunteer extends AppCompatActivity   {
 
         }
 
-        else {
 
-            skillsData.add("Reading in Arabic");
-            skillsDescription.add("Reading Arabic with a clear voice, good accent, and medium speed");
-            skillsData.add("Reading in English");
-            skillsDescription.add("Reading English with a clear voice, good accent, and medium speed");
-
-        }
 
 
 

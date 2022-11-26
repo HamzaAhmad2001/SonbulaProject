@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="112dp"
         android:contentDescription="Skills"
         android:text="Skills"
         android:textColor="#3884A7"
@@ -61,8 +61,8 @@
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="378dp"
+        android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:contentDescription="Select the skills that you feel you are mastering it.(How you can help)."
         android:text="Select the skills that you feel you are mastering it.(How you can help)."
@@ -73,8 +73,8 @@
 
     <TextView
         android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="378dp"
+        android:layout_height="79dp"
         android:text="For example: if you are a good Arabic reader, then select the option Reading in Arabic, etc."
         android:textColor="#000000"
         android:textSize="20sp"
@@ -423,7 +423,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_signUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
