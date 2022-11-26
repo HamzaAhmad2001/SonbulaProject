@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingTop="25dp"
+    android:paddingRight="35dp"
+    android:paddingBottom="35dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-110dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/buttonBackToWelcome"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="7dp"
+            android:background="?attr/actionModeCloseDrawable"
+            android:backgroundTint="#3884A7"
+            android:contentDescription="back "
+            android:textSize="24dp"
+             />
+
+
+        <TextView
+            android:contentDescription="Welcome"
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Welcome"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:contentDescription="Snbula Application Logo"
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="-30dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/logo1" />
+
+    <TextView
+        android:contentDescription="Sign up as"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:paddingTop="25dp"
+        android:text="Sign up as"
+        android:textAlignment="center"
+        android:textColor="#3884A7"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonVolunteerSignUpAs"
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:background="@drawable/aaaa"
+        android:contentDescription="Volunteer"
+        android:drawableLeft="@drawable/volunteer"
+        android:text="Volunteer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Disabled"
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/aaaa"
+        android:contentDescription="Disabled"
+        android:drawableLeft="@drawable/disabled"
+        android:text="Disabled"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Already have an account?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/goToLoginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="login"
+            android:textAlignment="center"
+            android:textColor="#0027FF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
