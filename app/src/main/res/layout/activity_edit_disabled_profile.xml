@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="gravity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/disability_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="150dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Disability Type"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <Button
+        android:id="@+id/details2"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/detail_buttons"
+
+        android:drawableBottom="@drawable/detail_buttons"
+
+        android:text="Details"
+        app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
+        app:layout_constraintTop_toTopOf="@+id/dis_type_rec"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="287dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Hint: Mobility and physical impariments means issues with movement,Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/dis_type_rec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/details3"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/detail_buttons"
+
+        android:drawableBottom="@drawable/detail_buttons"
+
+
+        android:text="Details"
+        app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
+        app:layout_constraintTop_toTopOf="@+id/dis_type_rec"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Accept help from females"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/details1"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/detail_buttons"
+
+        android:drawableBottom="@drawable/detail_buttons"
+
+        android:text="Details"
+        app:layout_constraintBottom_toTopOf="@+id/wheelchair"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
+        app:layout_constraintTop_toTopOf="@+id/dis_type_rec"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/dis_type_rec"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@drawable/view1_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <CheckBox
+        android:id="@+id/physicalCheck"
+        android:layout_width="220dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Mobility and Physical Imapriments'"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
+        app:layout_constraintTop_toBottomOf="@+id/description2" />
+
+    <CheckBox
+        android:id="@+id/deafCheck"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Deaf or Hard Hearing"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/visionCheck"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
+        app:layout_constraintTop_toBottomOf="@+id/physicalCheck"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <CheckBox
+        android:id="@+id/visionCheck"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Vision Impariments"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="225dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Accept help from males"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dis_type_rec" />
+
+    <TextView
+        android:id="@+id/description1"
+        android:layout_width="287dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Select your disabiity type that you need volunteers for ."
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disability_type" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="298dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/buttons_design"
+        android:backgroundTint="#FFFFFFFF"
+        android:drawableBottom="@drawable/buttons_design"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Save Changes"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="298dp"
+        android:layout_height="45dp"
+        android:background="@drawable/buttons_design"
+        android:backgroundTint="#FFFFFFFF"
+        android:drawableBottom="@drawable/buttons_design"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+    <ImageView
+        android:id="@+id/male"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toTopOf="@+id/checkBox4"
+        app:layout_constraintVertical_bias="0.392"
+        app:srcCompat="@drawable/male" />
+
+    <ImageView
+        android:id="@+id/female"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="219dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
+        app:layout_constraintStart_toStartOf="@+id/checkBox5"
+        app:layout_constraintTop_toTopOf="@+id/checkBox5"
+        app:srcCompat="@drawable/female" />
+
+    <ImageView
+        android:id="@+id/wheelchair"
+        android:layout_width="37dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toEndOf="@+id/physicalCheck"
+        app:layout_constraintTop_toTopOf="@+id/physicalCheck"
+        app:layout_constraintVertical_bias="0.172"
+        app:srcCompat="@drawable/wheelchair" />
+
+    <ImageView
+        android:id="@+id/ear"
+        android:layout_width="37dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toEndOf="@+id/deafCheck"
+        app:layout_constraintTop_toBottomOf="@+id/details2"
+        app:layout_constraintVertical_bias="0.060000002"
+        app:srcCompat="@drawable/ear" />
+
+    <ImageView
+        android:id="@+id/eye"
+        android:layout_width="37dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toEndOf="@+id/visionCheck"
+        app:layout_constraintTop_toBottomOf="@+id/details3"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/eye" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
