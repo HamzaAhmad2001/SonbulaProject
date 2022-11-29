@@ -22,7 +22,6 @@ EditText EditTextTextPersonStudentIDVolunteer;
 SharedPreferences.Editor edit;
 SharedPreferences sp;
 
-=======
 RadioGroup radioGroupMF;
 RadioButton radioButton;
 EditText passwordVolunteer,idVolunteer;
@@ -48,7 +47,7 @@ EditText passwordVolunteer,idVolunteer;
                 startActivity(intentBackSignup);
             }
         });
-        EditTextTextPersonStudentIDVolunteer=findViewById(R.id.editTextTextPersonStudentIDVolunteer);
+        EditTextTextPersonStudentIDVolunteer=findViewById(R.id.idVolunteer);
 
 passwordVolunteer=findViewById(R.id.passwordVolunteer);
         idVolunteer=findViewById(R.id.idVolunteer);
@@ -92,8 +91,8 @@ passwordVolunteer=findViewById(R.id.passwordVolunteer);
                     {
                         if(x)
                         {
-                            Intent intentButtonNextSignUpVolunteerPage2 = new Intent(SignUpVolunteerPage1.this, SignUpVolunteerPage2.class);
-                            startActivity(intentButtonNextSignUpVolunteerPage2);
+                            Intent intent = new Intent(SignUpVolunteerPage1.this, SignUpVolunteerPage2.class);
+                            startActivity(intent);
                         }
                         {
                             openDialog("Please enter your gender");
