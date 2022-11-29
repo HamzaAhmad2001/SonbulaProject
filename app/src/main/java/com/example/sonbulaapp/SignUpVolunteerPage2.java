@@ -20,6 +20,7 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     private Button btn_writingEnglish;
     private Button btn_helpMate;
 
+
     Button btn_DetailsReadingArb;
     Button btn_DetailsReadingEng;
     Button btn_DetailsWritingArb;
@@ -115,6 +116,12 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
 
 
         btn_signup.setOnClickListener(this);
+
+
+
+
+
+=======
     }
 
 

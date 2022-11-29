@@ -1,5 +1,7 @@
 package com.example.sonbulaapp;
 
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +25,10 @@ public class ProfileVolunteer extends AppCompatActivity   {
 
 
 private Button btn_editProfile;
+private TextView ed_id;
+SharedPreferences sp;
+
+=======
 ImageButton btn_Setting;
 
 
@@ -32,6 +39,11 @@ ImageButton btn_Setting;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_volunteer);
+
+        ed_id=findViewById(R.id.ed_ID);
+        getID();
+
+
 
         setSkillsList();
 
@@ -55,6 +67,12 @@ ImageButton btn_Setting;
         });
 
 
+    }
+
+    public void getID(){
+        sp = getSharedPreferences("ID",MODE_PRIVATE);
+        String ID=sp.getString("ID","IDD");
+        ed_id.setText(ID);
     }
 
     public void setSkillsList(){
