@@ -14,17 +14,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1"/>
+
     <Button
         android:id="@+id/buttonBackSignUpDisabled"
         android:layout_width="59dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginTop="16dp"
         android:background="?attr/actionModeCloseDrawable"
         android:backgroundTint="#3884A7"
         android:contentDescription="back "
         android:textSize="24dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
@@ -37,8 +40,9 @@
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonBackSignUpDisabled"
         app:layout_constraintEnd_toStartOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/buttonBackSignUpDisabled" />
+
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
@@ -81,15 +85,15 @@
         app:layout_constraintVertical_bias="0.053" />
 
     <EditText
-        android:id="@+id/editTextTextPersonStudentIDDisabled"
+        android:id="@+id/idDisabled"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Student id entry field"
+        android:contentDescription="enter your student id"
         android:ems="10"
-        android:hint="193759"
-        android:inputType="textPersonName"
+        android:hint="1937517"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/textStudentIDDisabled"
         app:layout_constraintTop_toBottomOf="@+id/textStudentIDDisabled" />
 
@@ -104,17 +108,18 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonStudentIDDisabled" />
+        app:layout_constraintTop_toBottomOf="@+id/idDisabled" />
+
     <EditText
-        android:id="@+id/editTextTextPasswordDisabled"
+        android:id="@+id/passwordDisabled"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="40dp"
-        android:contentDescription="Pasword"
+        android:contentDescription="enter your Pasword"
         android:ems="10"
-        android:hint="Ahmad_00"
+        android:hint="0000"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,10 +136,10 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordDisabled" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordDisabled" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupMFD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -146,17 +151,17 @@
         app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonMaleD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Radio Btton Male"
+            android:contentDescription="Male"
             android:text="Male" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButtonFemaleD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Radio Button Female"
+            android:contentDescription="Female"
             android:text="Female" />
 
     </RadioGroup>
@@ -167,8 +172,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="next sign up disabled page 2"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="next"
         android:text="Next"
         android:textAllCaps="false"
         android:textColor="#F4F4F4"

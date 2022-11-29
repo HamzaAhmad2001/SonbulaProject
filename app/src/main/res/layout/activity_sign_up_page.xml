@@ -12,13 +12,13 @@
     android:paddingBottom="35dp"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="-110dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/buttonBackToWelcome"
             android:layout_width="59dp"
@@ -27,31 +27,29 @@
             android:layout_marginEnd="7dp"
             android:background="?attr/actionModeCloseDrawable"
             android:backgroundTint="#3884A7"
-            android:contentDescription="back "
-            android:textSize="24dp"
-             />
-
+            android:contentDescription="back to welcome page"
+            android:textSize="24dp" />
 
         <TextView
-            android:contentDescription="Welcome"
-            android:id="@+id/textView5"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
+            android:contentDescription="Welcome"
             android:text="Welcome"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView
-        android:contentDescription="Snbula Application Logo"
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="-30dp"
+
         android:layout_weight="1"
+        android:contentDescription="Snbula Application Logo"
         app:srcCompat="@drawable/logo1" />
 
     <TextView
@@ -74,7 +72,7 @@
         android:layout_height="1dp"
         android:layout_marginBottom="15dp"
         android:layout_weight="1"
-        android:background="@drawable/aaaa"
+        android:background="@drawable/color_raduis"
         android:contentDescription="Volunteer"
         android:drawableLeft="@drawable/volunteer"
         android:text="Volunteer"
@@ -88,7 +86,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
         android:layout_weight="1"
-        android:background="@drawable/aaaa"
+        android:background="@drawable/color_raduis"
         android:contentDescription="Disabled"
         android:drawableLeft="@drawable/disabled"
         android:text="Disabled"
@@ -119,10 +117,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
+            android:contentDescription="login"
             android:text="login"
             android:textAlignment="center"
             android:textColor="#0027FF"
             android:textSize="20sp" />
     </LinearLayout>
-
 </LinearLayout>

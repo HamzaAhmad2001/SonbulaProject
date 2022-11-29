@@ -3,11 +3,15 @@ package com.example.sonbulaapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,7 +22,12 @@ public class ProfileVolunteer extends AppCompatActivity   {
 
 
 private Button btn_editProfile;
+ImageButton btn_Setting;
 
+
+
+
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +40,19 @@ private Button btn_editProfile;
         this.btn_editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileVolunteer.this, ProfileVolunteer.class);
+                Intent intent = new Intent(ProfileVolunteer.this,EditProfile.class);
                 startActivity(intent);
             }
         });
 
+        btn_Setting=findViewById(R.id.btn_setting);
+        btn_Setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentbtn_setting=new Intent(ProfileVolunteer.this,SettingPage.class);
+                startActivity(intentbtn_setting);
+            }
+        });
 
 
     }
@@ -52,9 +69,7 @@ private Button btn_editProfile;
 
         skillsData=bundle.getStringArrayList("stringarray");
 
-
-
-        if(skillsData.size() >0) {
+        if(skillsData.size() >0 ) {
 
             for(int i=0 ; i<skillsData.size() ; i++)
             {
@@ -85,9 +100,6 @@ private Button btn_editProfile;
             }
 
         }
-
-
-
 
 
         CustomAdapter adapter = new CustomAdapter(this, skillsData ,skillsDescription);
