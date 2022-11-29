@@ -21,6 +21,13 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     private Button btn_helpMate;
 
 
+    Button btn_DetailsReadingArb;
+    Button btn_DetailsReadingEng;
+    Button btn_DetailsWritingArb;
+    Button btn_DetailsWritingEng;
+    Button btn_DetailsHelpMate;
+
+
     private Button btn_signup;
 
     private CheckBox chk_readingArabic;
@@ -32,10 +39,61 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     public ArrayList<String> skillsArray = new ArrayList<>();
 
     Button buttonBackSignupVolunteerPage1;
+
+    SharedPreferences.Editor edit;
+    SharedPreferences sp;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_volunteer_page2);
+
+        buttonBackSignupVolunteerPage1=findViewById(R.id.buttonBackSignUpVolunteerPage1);
+        buttonBackSignupVolunteerPage1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentbuttonBackSignupVolunteerPage1=new Intent(SignUpVolunteerPage2.this,SignUpVolunteerPage1.class);
+                startActivity(intentbuttonBackSignupVolunteerPage1);
+            }
+        });
+
+        btn_DetailsReadingArb=findViewById(R.id.btn_DetailsReadingArb);
+        btn_DetailsReadingArb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog("You are able to read Arabic language in a good accent,voice and medium speed.");
+            }
+        });
+        btn_DetailsReadingEng=findViewById(R.id.btn_DetailsReadingEng);
+        btn_DetailsReadingEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog("You are able to read English language in a good accent,voice and medium speed.");
+            }
+        });
+        btn_DetailsWritingArb=findViewById(R.id.btn_DetailsWritingArb);
+        btn_DetailsWritingArb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog("You have a good,clear Arabic language handwriting.");
+            }
+        });
+        btn_DetailsWritingEng=findViewById(R.id.btn_DetailsWritingEng);
+        btn_DetailsWritingEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog("You have a good,clear English language handwriting.");
+            }
+        });
+        btn_DetailsHelpMate=findViewById(R.id.btn_DetailsHelpMate);
+        btn_DetailsHelpMate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog("You are able to help the disabled in moving between colleges.");
+            }
+        });
 
         btn_readingArabic= (Button) findViewById(R.id.btn_DetailsReadingArb);
         btn_readingEnglish= (Button)findViewById(R.id.btn_DetailsReadingEng);
@@ -63,7 +121,9 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
 
 
 
+=======
     }
+
 
     public void openDialog(String s)
     {
@@ -77,27 +137,40 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
 
         if(v.getId() == R.id.btn_signUp)
         {
-            if(chk_readingArabic.isChecked())
-                skillsArray.add("Reading in Arabic");
-            if(chk_readingEnglish.isChecked())
-                skillsArray.add("Reading in English");
-            if(chk_writingArabic.isChecked())
-                skillsArray.add("Writing in Arabic");
-            if(chk_writingEnglish.isChecked())
-                skillsArray.add("Writing in English");
-            if(chk_helpMate.isChecked())
-                skillsArray.add("Being a helpmate");
+            if(isCheckeed())
+            {
+                if(chk_readingArabic.isChecked())
+                    skillsArray.add("Reading in Arabic");
+                if(chk_readingEnglish.isChecked())
+                    skillsArray.add("Reading in English");
+                if(chk_writingArabic.isChecked())
+                    skillsArray.add("Writing in Arabic");
+                if(chk_writingEnglish.isChecked())
+                    skillsArray.add("Writing in English");
+                if(chk_helpMate.isChecked())
+                    skillsArray.add("Being a helpmate");
+
+
+                // Toast.makeText(this,skillsArray.toString(),Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(this, ProfileVolunteer.class);
+
+                intent.putExtra("stringarray",skillsArray);
+
+
+
+                startActivity(intent);
+
+            }
+            else
+                openDialog("Please check at least one skill");
+
+
 
 
            // Toast.makeText(this,skillsArray.toString(),Toast.LENGTH_LONG).show();
 
-            Intent intent = new Intent(this, ProfileVolunteer.class);
 
-            intent.putExtra("stringarray",skillsArray);
-
-
-
-            startActivity(intent);
 
 
             return ;
@@ -128,5 +201,13 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
         }
 
 
+    }
+    public boolean isCheckeed()
+    {
+        if(chk_readingArabic.isChecked() || chk_readingEnglish.isChecked() || chk_writingArabic.isChecked() ||chk_writingEnglish.isChecked() || chk_helpMate.isChecked()  )
+            return true;
+
+        else
+            return false;
     }
 }

@@ -47,15 +47,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editTextStudentDisabled"
+        android:id="@+id/id_Disabled"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Student id entry field"
+        android:contentDescription="enter your student id"
         android:ems="10"
-        android:hint="1937549"
-        android:inputType="textPersonName"
+        android:hint="1937517"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -65,22 +65,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="33dp"
-        android:contentDescription="Pasword"
-        android:text="Pasword:"
+        android:contentDescription="Password"
+        android:text="Password:"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentDisabled" />
+        app:layout_constraintTop_toBottomOf="@+id/id_Disabled" />
 
     <EditText
-        android:id="@+id/editTextPasswordDisabled"
+        android:id="@+id/Password_Disabled"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
-        android:contentDescription="password entry field"
+        android:contentDescription="enter your password"
         android:ems="10"
-        android:hint="Ahmad_00"
+        android:hint="0000"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
@@ -91,14 +91,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="104dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="Buton Log in"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="Log in"
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextPasswordDisabled"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordDisabled" />
+        app:layout_constraintStart_toStartOf="@+id/Password_Disabled"
+        app:layout_constraintTop_toBottomOf="@+id/Password_Disabled" />
 
     <TextView
         android:id="@+id/textView12"
@@ -122,7 +122,7 @@
         android:id="@+id/textViewSignUpLD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Button Sign up"
+        android:contentDescription="Sign up"
         android:text="Sign up"
         android:textColor="#0026FC"
         android:textSize="20sp"
@@ -131,7 +131,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView12" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/chk_Remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -141,6 +141,6 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordDisabled" />
+        app:layout_constraintTop_toBottomOf="@+id/Password_Disabled" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

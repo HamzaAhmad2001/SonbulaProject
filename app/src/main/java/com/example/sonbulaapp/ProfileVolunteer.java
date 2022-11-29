@@ -5,6 +5,7 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +28,13 @@ private Button btn_editProfile;
 private TextView ed_id;
 SharedPreferences sp;
 
+=======
+ImageButton btn_Setting;
 
+
+
+
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +52,19 @@ SharedPreferences sp;
         this.btn_editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileVolunteer.this, ProfileVolunteer.class);
+                Intent intent = new Intent(ProfileVolunteer.this,EditProfile.class);
                 startActivity(intent);
             }
         });
 
+        btn_Setting=findViewById(R.id.btn_setting);
+        btn_Setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentbtn_setting=new Intent(ProfileVolunteer.this,SettingPage.class);
+                startActivity(intentbtn_setting);
+            }
+        });
 
 
     }
@@ -71,9 +87,7 @@ SharedPreferences sp;
 
         skillsData=bundle.getStringArrayList("stringarray");
 
-
-
-        if(skillsData.size() >0) {
+        if(skillsData.size() >0 ) {
 
             for(int i=0 ; i<skillsData.size() ; i++)
             {
@@ -104,9 +118,6 @@ SharedPreferences sp;
             }
 
         }
-
-
-
 
 
         CustomAdapter adapter = new CustomAdapter(this, skillsData ,skillsDescription);

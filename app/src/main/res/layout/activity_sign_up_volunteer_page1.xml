@@ -87,15 +87,15 @@
         app:layout_constraintVertical_bias="0.053" />
 
     <EditText
-        android:id="@+id/editTextTextPersonStudentIDVolunteer"
+        android:id="@+id/idVolunteer"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Student id entry field"
+        android:contentDescription="Enter your Student id "
         android:ems="10"
-        android:hint="1837991"
-        android:inputType="textPersonName"
+        android:hint="1937517"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/textStudentIDVolunteer"
         app:layout_constraintTop_toBottomOf="@+id/textStudentIDVolunteer" />
 
@@ -110,18 +110,18 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonStudentIDVolunteer" />
+        app:layout_constraintTop_toBottomOf="@+id/idVolunteer" />
 
     <EditText
-        android:id="@+id/editTextTextPasswordVolunteer"
+        android:id="@+id/passwordVolunteer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="40dp"
-        android:contentDescription="Pasword"
+        android:contentDescription="Enter your Pasword"
         android:ems="10"
-        android:hint="Ahmad_00"
+        android:hint="0000"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,10 +138,10 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordVolunteer" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordVolunteer" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupMFD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -153,17 +153,17 @@
         app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
-            android:id="@+id/radioButton1"
+            android:id="@+id/radioButtonMale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Radio Btton Male"
+            android:contentDescription="Male"
             android:text="Male" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonFemale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Radio Button Female"
+            android:contentDescription="Female"
             android:text="Female" />
     </RadioGroup>
 
@@ -173,8 +173,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="Next sign up voluneer page 2"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="Next"
         android:text="Next"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"

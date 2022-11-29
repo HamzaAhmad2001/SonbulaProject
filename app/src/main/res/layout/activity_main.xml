@@ -11,7 +11,7 @@
     android:paddingRight="35dp"
     android:paddingBottom="35dp"
     tools:context=".MainActivity">
-
+//
 
     <ImageView
         android:contentDescription="Snbula Application Logo"
@@ -69,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="login"
             android:text="login"
             android:textColor="#0027FF"
             android:textSize="20sp" />
@@ -80,7 +81,7 @@
         android:layout_height="10dp"
         android:layout_marginBottom="40dp"
         android:layout_weight="1"
-        android:background="@drawable/aaaa"
+        android:background="@drawable/color_raduis"
         android:contentDescription="Sign up"
         android:text="Sign up"
         android:textAllCaps="false"
