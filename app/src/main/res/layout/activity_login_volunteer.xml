@@ -47,15 +47,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editTextStudentVolunteer"
+        android:id="@+id/id_Volunteer"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Student id entry field"
+        android:contentDescription="enter your student id"
         android:ems="10"
-        android:hint="1837991"
-        android:inputType="textPersonName"
+        android:hint="1937517"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -70,17 +70,17 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentVolunteer" />
+        app:layout_constraintTop_toBottomOf="@+id/id_Volunteer" />
 
     <EditText
-        android:id="@+id/editTextPasswordVolunteer"
+        android:id="@+id/password_Volunteer"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
-        android:contentDescription="password entry field"
+        android:contentDescription="enter your password"
         android:ems="10"
-        android:hint="Ahmad_00"
+        android:hint="0000"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
@@ -91,14 +91,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="104dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="Buton Log in"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="Log in"
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextPasswordVolunteer"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordVolunteer" />
+        app:layout_constraintStart_toStartOf="@+id/password_Volunteer"
+        app:layout_constraintTop_toBottomOf="@+id/password_Volunteer" />
 
     <TextView
         android:id="@+id/textView12"
@@ -122,7 +122,7 @@
         android:id="@+id/textViewSignUpLV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Button Sign up"
+        android:contentDescription="Sign up"
         android:text="Sign up"
         android:textColor="#0026FC"
         android:textSize="20sp"
@@ -141,6 +141,6 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordVolunteer" />
+        app:layout_constraintTop_toBottomOf="@+id/password_Volunteer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

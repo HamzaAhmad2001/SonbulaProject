@@ -133,7 +133,7 @@
             app:srcCompat="@drawable/downloads" />
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/btn_setting"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
