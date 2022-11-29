@@ -28,7 +28,6 @@ private Button btn_editProfile;
 private TextView ed_id;
 SharedPreferences sp;
 
-=======
 ImageButton btn_Setting;
 
 
