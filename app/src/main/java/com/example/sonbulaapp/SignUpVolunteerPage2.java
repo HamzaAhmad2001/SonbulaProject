@@ -3,6 +3,7 @@ package com.example.sonbulaapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     private Button btn_writingArabic;
     private Button btn_writingEnglish;
     private Button btn_helpMate;
+
 
     private Button btn_signup;
 
@@ -56,6 +58,10 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
 
 
         btn_signup.setOnClickListener(this);
+
+
+
+
 
     }
 
