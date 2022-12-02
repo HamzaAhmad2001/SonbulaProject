@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="gravity">
+
+
+    <Button
+        android:id="@+id/detailButton_4"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/detail_buttons"
+
+        android:drawableBottom="@drawable/detail_buttons"
+
+
+        android:fontFamily="@font/montserrat"
+        android:text="Details"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toEndOf="@+id/writer2"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/detailButton_3"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/detail_buttons"
+        android:backgroundTint="#47A8A8"
+        android:drawableBottom="@drawable/detail_buttons"
+
+
+        android:fontFamily="@font/montserrat"
+        android:text="Details"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toEndOf="@+id/writer1"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/detailButton_2"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/detail_buttons"
+        android:backgroundTint="#47A8A8"
+        android:drawableBottom="@drawable/detail_buttons"
+
+        android:fontFamily="@font/montserrat"
+        android:text="Details"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/reader2"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/needs"
+        android:layout_width="151dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="300dp"
+
+        android:backgroundTint="#FFFFFFFF"
+
+        android:fontFamily="@font/montserrat"
+        android:gravity="start|left"
+        android:text="Needs"
+        android:textColor="#0A0B0B"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="62dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/needsDescription1"
+        android:layout_width="357dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="280dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Select what do you need from your volunteer. (In this meeting)"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/needsDescription2"
+        android:layout_width="353dp"
+        android:layout_height="44dp"
+
+        android:fontFamily="@font/montserrat"
+        android:text="For example: if you are a good Arabic reader, then select the option Arabic Reader, etc."
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <view
+        android:id="@+id/needs_set"
+        class="androidx.appcompat.widget.ActionMenuView"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/view1_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <Button
+        android:id="@+id/detailButton_5"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/detail_buttons"
+        android:backgroundTint="#47A8A8"
+        android:drawableBottom="@drawable/detail_buttons"
+
+        android:fontFamily="@font/montserrat"
+        android:text="Details"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/helpmate"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <Button
+        android:id="@+id/detailButton_1"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/detail_buttons"
+        android:backgroundTint="#47A8A8"
+        android:drawableBottom="@drawable/detail_buttons"
+        android:fontFamily="@font/montserrat"
+        android:text="Details"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toEndOf="@+id/reader1"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <CheckBox
+        android:id="@+id/arabicReaderCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Arabic Reader"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="@+id/needs_set"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <CheckBox
+        android:id="@+id/englishReaderCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="English Reader"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="@+id/needs_set"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <CheckBox
+        android:id="@+id/arabicWriterCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Arabic Writer"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="@+id/needs_set"
+        app:layout_constraintTop_toTopOf="@+id/needs_set" />
+
+    <CheckBox
+        android:id="@+id/englishWriterCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="English Writer"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="@+id/needs_set"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <CheckBox
+        android:id="@+id/helpmateCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="A Helpamate"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="@+id/needs_set"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <ImageView
+        android:id="@+id/reader1"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toEndOf="@+id/arabicReaderCheck"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.079"
+        app:srcCompat="@drawable/reading"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/reader2"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toEndOf="@+id/englishReaderCheck"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.262"
+        app:srcCompat="@drawable/reading"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/writer1"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toEndOf="@+id/arabicWriterCheck"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:srcCompat="@drawable/writing" />
+
+    <ImageView
+        android:id="@+id/writer2"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toEndOf="@+id/englishWriterCheck"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.692"
+        app:srcCompat="@drawable/writing"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/helpmate"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/needs_set"
+        app:layout_constraintEnd_toEndOf="@+id/needs_set"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toEndOf="@+id/helpmateCheck"
+        app:layout_constraintTop_toTopOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.94"
+        app:srcCompat="@drawable/wheelchair"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/findVolunteerButton"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttons_design"
+        android:contentDescription="Find a Volunteer"
+        android:fontFamily="@font/montserrat"
+        android:text="Find a Volunteer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/needs_set"
+        app:layout_constraintVertical_bias="0.745" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/prev_next_button_design"
+        android:fontFamily="@font/montserrat"
+        android:text="BACK"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

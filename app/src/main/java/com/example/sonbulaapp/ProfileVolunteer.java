@@ -97,8 +97,8 @@ ImageButton btn_Setting;
                         skillsDescription.add("Reading Arabic with a clear voice, good accent, and medium speed");
                         break;
 
-                    case "Reading in English":
-                        skillsDescription.add("Reading English with a clear voice, good accent, and medium speed");
+                    case "Reading in English":                        skillsDescription.add("Reading English with a clear voice, good accent, and medium speed");
+
                         break;
 
                     case "Writing in Arabic":
