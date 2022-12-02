@@ -28,6 +28,7 @@
         android:layout_marginTop="76dp"
 
         android:backgroundTint="#FFFFFFFF"
+
         android:fontFamily="@font/montserrat"
         android:gravity="start|left"
         android:text="Instant Help"
@@ -43,13 +44,13 @@
         android:id="@+id/placeList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
         android:text="Place List"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instant_help" />
 
@@ -60,6 +61,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/select_place_design"
+        android:entries="@array/places"
         android:splitMotionEvents="true"
         android:transitionGroup="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +73,7 @@
         android:id="@+id/anyDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
         android:text="Any Descriptions?"
         android:textColor="#050505"
         android:textSize="20sp"
@@ -81,118 +84,88 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.346" />
 
+
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
         android:layout_width="300dp"
         android:layout_height="250dp"
         android:layout_marginBottom="84dp"
         android:background="@drawable/description_box_design"
+        android:fontFamily="@font/montserrat"
         android:hint="Type Here..."
         android:singleLine="false"
         android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/anyDescription"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.08" />
 
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="417dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/nextButton">
 
-    <ImageButton
-        android:id="@+id/profileButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
-        app:layout_constraintHorizontal_bias="0.257"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/profile"
-        android:background="@color/white"/>
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile" />
 
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.714"
-        app:srcCompat="@drawable/home"
-        android:background="@color/white"
-        />
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/home" />
 
-    <ImageButton
-        android:id="@+id/archiveButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/archive" />
+        <ImageButton
+            android:id="@+id/btn_archive"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/downloads" />
 
-    <ImageButton
-        android:id="@+id/settingButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.18"
-        app:srcCompat="@drawable/settings" />
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/settings" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="75dp"
-        android:layout_height="41dp"
-        android:background="@drawable/nexet_button_design"
+        android:layout_height="0dp"
+        android:layout_marginTop="611dp"
+        android:onClick="onClick"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/next_button_design"
         android:fontFamily="@font/montserrat"
-
         android:text="Next>"
         android:textColor="#090909"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

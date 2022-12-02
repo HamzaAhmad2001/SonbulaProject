@@ -41,9 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="130dp"
-
         android:fontFamily="@font/montserrat"
-        android:text="Haya Hassan"
+        android:text="Full Name"
         android:textAlignment="viewStart"
         android:textColor="#070707"
         android:textSize="16sp"
@@ -60,37 +59,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginBottom="140dp"
-
         android:fontFamily="@font/montserrat"
-        android:text="1937549"
+        android:text="Student ID"
         android:textAlignment="viewStart"
         android:textColor="#070707"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/disability_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-
         android:fontFamily="@font/montserrat"
         android:text="Disability Type"
         android:textColor="#070707"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        tools:layout_editor_absoluteY="322dp" />
 
     <view
         android:id="@+id/dis_type_rec"
@@ -98,14 +90,12 @@
         android:layout_width="319dp"
         android:layout_height="161dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/view1_design"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintTop_toBottomOf="@+id/disability_type" />
 
     <TextView
         android:id="@+id/deaf"
@@ -113,7 +103,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
-
         android:fontFamily="@font/montserrat"
         android:text="Deaf or Hard Hearing"
         android:textColor="#0C0C0C"
@@ -132,7 +121,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginBottom="6dp"
-
         android:fontFamily="@font/montserrat"
         android:text="Mobility and physical Impariments"
         android:textColor="#0C0C0C"
@@ -151,7 +139,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-
         android:fontFamily="@font/montserrat"
         android:text="Vision Impariments"
         android:textColor="#0C0C0C"
@@ -166,25 +153,25 @@
 
 
     <Button
-        android:id="@+id/edit"
-        android:layout_width="300dp"
-        android:layout_height="25dp"
+        android:id="@+id/btn_edit"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="256dp"
+        android:onClick="onClick"
         android:background="@drawable/view1_design"
-        android:backgroundTint="#EAE4E4"
         android:drawableBottom="@drawable/view1_design"
-
         android:fontFamily="@font/montserrat"
         android:foreground="@drawable/view1_design"
         android:text="Edit Profile"
+        android:textAllCaps="false"
         android:textColor="#070505"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
 
+        />
 
     <Button
         android:id="@+id/detailButton1"
@@ -240,85 +227,51 @@
         app:layout_constraintTop_toTopOf="@+id/dis_type_rec"
         app:layout_constraintVertical_bias="0.9" />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="417dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageButton
-        android:id="@+id/profileButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
-        app:layout_constraintHorizontal_bias="0.257"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/profile"
-        android:background="@color/white"/>
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/profile" />
 
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.714"
-        app:srcCompat="@drawable/home"
-        android:background="@color/white"
-        />
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/home" />
 
-    <ImageButton
-        android:id="@+id/archiveButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/archive" />
+        <ImageButton
+            android:id="@+id/btn_archive"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/downloads" />
 
-    <ImageButton
-        android:id="@+id/settingButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottomAppBar"
-        app:layout_constraintVertical_bias="0.18"
-        app:srcCompat="@drawable/settings" />
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@color/white"
+            app:srcCompat="@drawable/settings" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

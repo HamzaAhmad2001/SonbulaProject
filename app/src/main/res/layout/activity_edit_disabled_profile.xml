@@ -30,6 +30,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="150dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Disability Type"
         android:textColor="#070707"
@@ -49,7 +50,10 @@
 
         android:drawableBottom="@drawable/detail_buttons"
 
+        android:fontFamily="@font/montserrat"
         android:text="Details"
+        android:textColor="#F4F3F3"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
         app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
         app:layout_constraintHorizontal_bias="0.947"
@@ -82,7 +86,10 @@
         android:drawableBottom="@drawable/detail_buttons"
 
 
+        android:fontFamily="@font/montserrat"
         android:text="Details"
+        android:textColor="#F4EFEF"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/dis_type_rec"
         app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
         app:layout_constraintHorizontal_bias="0.947"
@@ -94,6 +101,7 @@
         android:id="@+id/checkBox5"
         android:layout_width="240dp"
         android:layout_height="30dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Accept help from females"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,22 +110,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox4"
         app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/details1"
-        android:layout_width="52dp"
-        android:layout_height="25dp"
-        android:background="@drawable/detail_buttons"
-
-        android:drawableBottom="@drawable/detail_buttons"
-
-        android:text="Details"
-        app:layout_constraintBottom_toTopOf="@+id/wheelchair"
-        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
-        app:layout_constraintTop_toTopOf="@+id/dis_type_rec"
-        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/dis_type_rec"
@@ -129,13 +121,33 @@
         app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.578" />
+
+    <Button
+        android:id="@+id/details1"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/detail_buttons"
+
+        android:drawableBottom="@drawable/detail_buttons"
+
+        android:fontFamily="@font/montserrat"
+        android:text="Details"
+        android:textColor="#F4F1F1"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/wheelchair"
+        app:layout_constraintEnd_toEndOf="@+id/dis_type_rec"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="@+id/dis_type_rec"
+        app:layout_constraintTop_toTopOf="@+id/dis_type_rec"
+        app:layout_constraintVertical_bias="1.0" />
 
     <CheckBox
         android:id="@+id/physicalCheck"
         android:layout_width="220dp"
         android:layout_height="59dp"
         android:layout_marginTop="12dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Mobility and Physical Imapriments'"
         android:textSize="16sp"
@@ -149,6 +161,7 @@
         android:layout_width="220dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Deaf or Hard Hearing"
         android:textSize="16sp"
@@ -164,6 +177,7 @@
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginBottom="12dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Vision Impariments"
         android:textSize="16sp"
@@ -176,6 +190,7 @@
         android:id="@+id/checkBox4"
         android:layout_width="225dp"
         android:layout_height="30dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Accept help from males"
         app:layout_constraintEnd_toEndOf="parent"
@@ -188,6 +203,7 @@
         android:layout_width="287dp"
         android:layout_height="45dp"
         android:layout_marginTop="4dp"
+
         android:fontFamily="@font/montserrat"
         android:text="Select your disabiity type that you need volunteers for ."
         android:textSize="16sp"
@@ -198,18 +214,17 @@
         app:layout_constraintTop_toBottomOf="@+id/disability_type" />
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/btn_saveButton"
         android:layout_width="298dp"
         android:layout_height="45dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/buttons_design"
-        android:backgroundTint="#FFFFFFFF"
         android:drawableBottom="@drawable/buttons_design"
-        android:fontFamily="@font/montserrat"
         android:gravity="center"
         android:text="Save Changes"
-        android:textColor="#FFFFFFFF"
+        android:textColor="#E6E6E6"
         android:textSize="16sp"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -218,22 +233,21 @@
         app:layout_constraintVertical_bias="0.879" />
 
     <Button
-        android:id="@+id/cancelButton"
+        android:id="@+id/btn_cancelButton"
         android:layout_width="298dp"
         android:layout_height="45dp"
         android:background="@drawable/buttons_design"
-        android:backgroundTint="#FFFFFFFF"
         android:drawableBottom="@drawable/buttons_design"
-        android:fontFamily="@font/montserrat"
         android:gravity="center"
         android:text="Cancel"
         android:textColor="#FFFFFFFF"
         android:textSize="16sp"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_saveButton" />
 
     <ImageView
         android:id="@+id/male"
