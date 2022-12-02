@@ -76,11 +76,10 @@ passwordVolunteer=findViewById(R.id.passwordVolunteer);
         buttonNextSignupVolunteerPage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 edit.putString("ID" , EditTextTextPersonStudentIDVolunteer.getText().toString());
                 edit.apply();
-                Intent intentButtonNextSignUpVolunteerPage2=new Intent(SignUpVolunteerPage1.this,SignUpVolunteerPage2.class);
-                startActivity(intentButtonNextSignUpVolunteerPage2);
+               // Intent intentButtonNextSignUpVolunteerPage2=new Intent(SignUpVolunteerPage1.this,SignUpVolunteerPage2.class);
+              //  startActivity(intentButtonNextSignUpVolunteerPage2);
 
                 String id_Volunteer=idVolunteer.getText().toString();
                 String pass_Volunteer=passwordVolunteer.getText().toString();
