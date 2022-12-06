@@ -16,7 +16,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-110dp"
+        android:layout_marginLeft="-150dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -31,16 +31,6 @@
             android:contentDescription="back to welcome page"
             android:textSize="24dp" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:contentDescription="Welcome"
-            android:text="Welcome"
-            android:textSize="20sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView

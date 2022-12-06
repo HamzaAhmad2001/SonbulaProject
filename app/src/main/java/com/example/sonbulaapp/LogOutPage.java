@@ -20,8 +20,7 @@ Button btn_logout;
         buttonBackSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentButtonBackSetting=new Intent(LogOutPage.this,SettingPage.class);
-                startActivity(intentButtonBackSetting);
+                backToSetting();
             }
         });
 
@@ -29,9 +28,17 @@ Button btn_logout;
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentBtn_logout=new Intent(LogOutPage.this,MainActivity.class);
-                startActivity(intentBtn_logout);
+               LogOutButton();
             }
         });
+    }
+    public void backToSetting()
+    {
+        Intent intentButtonBackSetting=new Intent(LogOutPage.this,SettingPage.class);
+        startActivity(intentButtonBackSetting);
+    }public void LogOutButton()
+    {
+        Intent intentBtn_logout=new Intent(LogOutPage.this,MainActivity.class);
+        startActivity(intentBtn_logout);
     }
 }

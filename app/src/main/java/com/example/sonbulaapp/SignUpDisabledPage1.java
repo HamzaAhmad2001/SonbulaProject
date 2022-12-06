@@ -30,8 +30,7 @@ Button buttonNextSignupDisabledPage2;
         buttonBackSignupDisabled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentButtonBackSignUpDisabled=new Intent(SignUpDisabledPage1.this,SignUpPage.class);
-                startActivity(intentButtonBackSignUpDisabled);
+                backToSignUppPage();
             }
         });
 
@@ -60,37 +59,7 @@ Button buttonNextSignupDisabledPage2;
         buttonNextSignupDisabledPage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String id_Disabled=idDisabled.getText().toString();
-                String pass_Disabled=passwordDisabled.getText().toString();
-
-                if(id_Disabled.equals("1937517"))
-                {
-                    if(pass_Disabled.equals("0000"))
-                    {
-                        if(x)
-                        {
-                            Intent intentButtonNextSignUpVolunteerPage2 = new Intent(SignUpDisabledPage1.this, SignUpDisabledPage2.class);
-                            startActivity(intentButtonNextSignUpVolunteerPage2);
-                        }
-                        {
-                            openDialog("Please enter your gender");
-                        }
-
-                    }
-                    else
-                    {
-                        passwordDisabled.setError("please enter you pass");
-                    }
-
-                }
-                else
-                {
-
-                    idDisabled.setError("Pleass enter you id ");
-
-                }
-
+                openSignUpDisabledPage2();
             }
         });
 
@@ -101,6 +70,45 @@ Button buttonNextSignupDisabledPage2;
         Dia.show(getSupportFragmentManager(),"example dialog");
 
     }
+    public void backToSignUppPage()
+    {
+        Intent intentButtonBackSignUpDisabled=new Intent(SignUpDisabledPage1.this,SignUpPage.class);
+        startActivity(intentButtonBackSignUpDisabled);
+    }
+    public void openSignUpDisabledPage2()
+    {
+        String id_Disabled=idDisabled.getText().toString();
+        String pass_Disabled=passwordDisabled.getText().toString();
+
+        if(id_Disabled.equals("1937517"))
+        {
+            if(pass_Disabled.equals("0000"))
+            {
+                if(x)
+                {
+                    Intent intentButtonNextSignUpVolunteerPage2 = new Intent(SignUpDisabledPage1.this, SignUpDisabledPage2.class);
+                    startActivity(intentButtonNextSignUpVolunteerPage2);
+                }
+                {
+                    openDialog("Please enter your gender");
+                }
+
+            }
+            else
+            {
+                passwordDisabled.setError("please enter you pass");
+            }
+
+        }
+        else
+        {
+
+            idDisabled.setError("Pleass enter you id ");
+
+        }
+
+    }
+
 
 
 }

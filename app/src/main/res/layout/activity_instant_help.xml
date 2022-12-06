@@ -89,18 +89,17 @@
         android:id="@+id/textInputEditText"
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:layout_marginBottom="84dp"
         android:background="@drawable/description_box_design"
         android:fontFamily="@font/montserrat"
         android:hint="Type Here..."
         android:singleLine="false"
         android:textAlignment="textStart"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/anyDescription"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.192" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -156,13 +155,13 @@
         android:layout_width="75dp"
         android:layout_height="0dp"
         android:layout_marginTop="611dp"
-        android:onClick="onClick"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/next_button_design"
+        android:background="@drawable/color_raduis"
         android:fontFamily="@font/montserrat"
-        android:text="Next>"
-        android:textColor="#090909"
+        android:onClick="onClick"
+        android:text="Next"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

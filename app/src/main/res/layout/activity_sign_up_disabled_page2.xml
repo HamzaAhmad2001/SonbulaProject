@@ -27,7 +27,7 @@
         android:layout_marginTop="28dp"
         android:contentDescription="Disability Type"
         android:text="Disability Type"
-        android:textColor="#3884A7"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         android:layout_marginTop="24dp"
         android:contentDescription="Select your disability type that you need volunteers for."
         android:text="Select your disability type that you need volunteers for."
-        android:textColor="#000000"
+        android:textColor="#FF655E5E"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView28"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="Hint: Mobility and physical impariments, Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
         android:text="Hint: Mobility and physical impairments, Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
-        android:textColor="#000000"
+        android:textColor="#FF655E5E"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView29"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
@@ -83,8 +83,8 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="36dp"
-                android:layout_height="32dp"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="37dp"
-                android:layout_height="33dp"
+                android:layout_height="38dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_mobility"
@@ -103,8 +103,8 @@
 
             <ImageView
                 android:id="@+id/imageView11"
-                android:layout_width="36dp"
-                android:layout_height="31dp"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -128,7 +128,7 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="details vision impairment"
                 android:text="Details"
                 android:textColor="#FFFFFF"
@@ -141,7 +141,7 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="detils deaf or hard hearing"
                 android:text="Details"
                 android:textColor="#F8F8F8"
@@ -154,7 +154,7 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="details mobility and physical impairments"
                 android:text="Details"
                 android:textColor="#FFFFFF"
@@ -190,7 +190,7 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="Details Paralyzed"
                 android:text="Details"
                 android:textColor="#FFFFFF"
@@ -200,8 +200,8 @@
 
             <ImageView
                 android:id="@+id/imageView15"
-                android:layout_width="36dp"
-                android:layout_height="32dp"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -234,31 +234,16 @@
         android:id="@+id/buttonBackSignUpDisabledPage1"
 
 
-        android:layout_width="59dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginTop="32dp"
         android:background="?attr/actionModeCloseDrawable"
         android:backgroundTint="#3884A7"
         android:contentDescription="back to sign up page"
         android:textSize="24dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView27"
-        app:layout_constraintEnd_toStartOf="@+id/textView27"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="28dp"
-        android:contentDescription="Fill Information"
-        android:text="Fill Information"
-        android:textAlignment="center"
-        android:textColor="#3884A7"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonBackSignUpDisabledPage1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp" />
 
     <CheckBox
         android:id="@+id/chk_acceptHelpM"
@@ -288,8 +273,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="30dp"
-        android:layout_height="31dp"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
         android:layout_marginStart="28dp"
         app:layout_constraintStart_toEndOf="@+id/chk_acceptHelpM"
         app:layout_constraintTop_toTopOf="@+id/chk_acceptHelpM"
@@ -297,8 +282,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="30dp"
-        android:layout_height="31dp"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
         android:layout_marginStart="12dp"
         app:layout_constraintStart_toEndOf="@+id/chk_acceptHelpF"
         app:layout_constraintTop_toTopOf="@+id/chk_acceptHelpF"

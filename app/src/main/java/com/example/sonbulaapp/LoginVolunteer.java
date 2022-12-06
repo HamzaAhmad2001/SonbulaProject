@@ -21,7 +21,8 @@ public class LoginVolunteer extends AppCompatActivity {
         setContentView(R.layout.activity_login_volunteer);
 
 
-       /* id_Volunteer=findViewById(R.id.id_Volunteer);
+       /* button login and required id & password
+       id_Volunteer=findViewById(R.id.id_Volunteer);
         password_Volunteer=findViewById(R.id.password_Volunteer);
 
         buttonLogInVolunteer=findViewById(R.id.buttonLogInVolunteer);
@@ -58,9 +59,13 @@ public class LoginVolunteer extends AppCompatActivity {
         textViewSignupLV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentSignUp =new Intent(LoginVolunteer.this,SignUpPage.class);
-                startActivity(intentSignUp);
+                openSignUp();
             }
         });
+    }
+    public void openSignUp()
+    {
+        Intent intentSignUp =new Intent(LoginVolunteer.this,SignUpPage.class);
+        startActivity(intentSignUp);
     }
 }

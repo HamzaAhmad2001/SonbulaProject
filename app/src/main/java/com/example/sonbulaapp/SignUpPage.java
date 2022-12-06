@@ -23,21 +23,16 @@ public class SignUpPage extends AppCompatActivity {
         buttonBacktoWelcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    openWelcomePage();
+                    backToWelcomePage();
             }
-            public void openWelcomePage()
-            {
-                Intent intent = new Intent(SignUpPage.this,MainActivity.class);
-                startActivity(intent);
-            }
+
         });
         textViewLogin=findViewById(R.id.goToLoginPage);
 
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLogIn =new Intent(SignUpPage.this,LogInPage.class);
-                startActivity(intentLogIn);
+               openLogInPage();
 
             }
         });
@@ -45,18 +40,36 @@ public class SignUpPage extends AppCompatActivity {
         buttonVolunteerSignupAs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentSignUpVolunteerPage1 =new Intent(SignUpPage.this,SignUpVolunteerPage1.class);
-                startActivity(intentSignUpVolunteerPage1);
+                openSignUpVolunteerPage1();
             }
         });
         buttonDisabledSingupAs=findViewById(R.id.Disabled);
         buttonDisabledSingupAs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentbuttonDisabledSingupAs=new Intent(SignUpPage.this,SignUpDisabledPage1.class);
-                startActivity(intentbuttonDisabledSingupAs);
+                openSignUpDisabledPage1();
             }
         });
 
+    }
+    public void backToWelcomePage()
+    {
+        Intent intent = new Intent(SignUpPage.this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void openLogInPage()
+    {
+        Intent intentLogIn =new Intent(SignUpPage.this,LogInPage.class);
+        startActivity(intentLogIn);
+    }
+    public void openSignUpVolunteerPage1()
+    {
+        Intent intentSignUpVolunteerPage1 =new Intent(SignUpPage.this,SignUpVolunteerPage1.class);
+        startActivity(intentSignUpVolunteerPage1);
+    }
+    public void openSignUpDisabledPage1()
+    {
+        Intent intentbuttonDisabledSingupAs=new Intent(SignUpPage.this,SignUpDisabledPage1.class);
+        startActivity(intentbuttonDisabledSingupAs);
     }
 }

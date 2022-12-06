@@ -68,7 +68,7 @@ public class instant_help extends AppCompatActivity {
             public void onClick(View view) { openHome();}
         });
 
-        archive  = (ImageButton) findViewById(R.id.btn_archive);
+       /* archive  = (ImageButton) findViewById(R.id.btn_archive);
         archive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openArchive();}
@@ -79,7 +79,7 @@ public class instant_help extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openSettings();}
-        });
+        });*/
 
 
     }

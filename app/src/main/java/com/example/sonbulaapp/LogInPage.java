@@ -27,34 +27,51 @@ public class LogInPage extends AppCompatActivity {
             }
             public void openWelcomePage()
             {
-                Intent intent = new Intent(LogInPage.this,MainActivity.class);
-                startActivity(intent);
+                backToWelcome();
             }
         });
         textViewSignup = findViewById(R.id.textViewSignUp);
         textViewSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentSignUp =new Intent(LogInPage.this,SignUpPage.class);
-                startActivity(intentSignUp);
+              openSignUp();
             }
         });
         btnVolunteer=findViewById(R.id.buttonVolunteerLoginAs);
         btnVolunteer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentVolunteer =new Intent(LogInPage.this,LoginVolunteer.class);
-                startActivity(intentVolunteer);
+               openLogInVolunteer();
             }
         });
         btnDisabled=findViewById(R.id.Disabled);
         btnDisabled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentDisabled =new Intent(LogInPage.this,LoginDisabled.class);
-                startActivity(intentDisabled);
+                openLogInDisabled();
             }
         });
 
     }
+    public void backToWelcome()
+    {
+        Intent intent = new Intent(LogInPage.this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void openSignUp()
+    {
+        Intent intentSignUp =new Intent(LogInPage.this,SignUpPage.class);
+        startActivity(intentSignUp);
+    }
+    public void openLogInVolunteer()
+    {
+        Intent intentVolunteer =new Intent(LogInPage.this,LoginVolunteer.class);
+        startActivity(intentVolunteer);
+    }
+    public void openLogInDisabled()
+    {
+        Intent intentDisabled =new Intent(LogInPage.this,LoginDisabled.class);
+        startActivity(intentDisabled);
+    }
+
 }
