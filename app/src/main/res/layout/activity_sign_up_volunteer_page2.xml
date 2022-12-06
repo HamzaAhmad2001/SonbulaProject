@@ -19,31 +19,16 @@
 
     <Button
         android:id="@+id/buttonBackSignUpVolunteerPage1"
-        android:layout_width="59dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginTop="32dp"
         android:background="?attr/actionModeCloseDrawable"
         android:backgroundTint="#3884A7"
         android:contentDescription="back "
         android:textSize="24dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
-        app:layout_constraintEnd_toStartOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="28dp"
-        android:contentDescription="Fill Information"
-        android:text="Fill Information"
-        android:textAlignment="center"
-        android:textColor="#3884A7"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonBackSignUpVolunteerPage1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signUp" />
 
     <TextView
         android:id="@+id/textView22"
@@ -53,9 +38,8 @@
         android:layout_marginTop="68dp"
         android:contentDescription="Skills"
         android:text="Skills"
-        android:textColor="#3884A7"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +50,7 @@
         android:layout_marginTop="8dp"
         android:contentDescription="Select the skills that you feel you are mastering it.(How you can help)."
         android:text="Select the skills that you feel you are mastering it.(How you can help)."
-        android:textColor="#000000"
+        android:textColor="#FF655E5E"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -76,167 +60,12 @@
         android:layout_width="378dp"
         android:layout_height="79dp"
         android:text="For example: if you are a good Arabic reader, then select the option Reading in Arabic, etc."
-        android:textColor="#000000"
+        android:textColor="#FF655E5E"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
-   <!-- <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="52dp"
-        android:contentDescription="Reading in Arabic "
-        android:text="Reading in Arabic "
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView25"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Reading in Englsh"
-        android:text="Reading in Englsh"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Writing in Arabic"
-        android:text="Writing in Arabic"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Writing in English"
-        android:text="Writing in English"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Being a helmate"
-        android:text="Being a helmate"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="29dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="Sign up Button"
-        android:text="Sign up"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="46dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox5"
-        app:srcCompat="@drawable/wheelchair" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="36dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox3"
-        app:srcCompat="@drawable/hand" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="38dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox4"
-        app:srcCompat="@drawable/hand" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="36dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox2"
-        app:srcCompat="@drawable/reading" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="37dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox"
-        app:srcCompat="@drawable/reading" />
-
-    <Button
-        android:id="@+id/buttonDetailsReadArb"
-        android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="button details reading in arabic"
-        android:text="Details"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox" />
-
-    <Button
-        android:id="@+id/buttonDetailsReadEng"
-        android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="button details reading in english"
-        android:text="Details"
-        android:textColor="#F8F8F8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
-
-    <Button
-        android:id="@+id/buttonWritingArb"
-        android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/aaaa"
-        android:contentDescription="button details read in english"
-        android:text="Details"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox3" />-->
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="403dp"
@@ -264,8 +93,8 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="36dp"
-                android:layout_height="32dp"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -275,7 +104,7 @@
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="37dp"
-                android:layout_height="33dp"
+                android:layout_height="38dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_readingArabic"
@@ -283,8 +112,8 @@
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="38dp"
-                android:layout_height="32dp"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
                 android:layout_marginEnd="132dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish"
@@ -292,8 +121,8 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="36dp"
-                android:layout_height="27dp"
+                android:layout_width="37dp"
+                android:layout_height="28dp"
                 android:layout_marginEnd="132dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_helpmate"
@@ -301,8 +130,8 @@
 
             <ImageView
                 android:id="@+id/imageView11"
-                android:layout_width="36dp"
-                android:layout_height="31dp"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -336,10 +165,10 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="Details of read in english"
                 android:text="Details"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_writingArabic" />
@@ -349,10 +178,10 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="Details reading in english"
                 android:text="Details"
-                android:textColor="#F8F8F8"
+                android:textColor="@color/white"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish" />
@@ -362,10 +191,10 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="Details of reading in arabic"
                 android:text="Details"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_readingArabic" />
@@ -375,10 +204,10 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="Detals of being a helmate"
                 android:text="Details"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_helpmate" />
@@ -388,10 +217,10 @@
                 android:layout_width="73dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="40dp"
-                android:background="#3884A7"
+                android:background="#47A8A8"
                 android:contentDescription="Detalis of writing in english"
                 android:text="Details"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish" />

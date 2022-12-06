@@ -43,8 +43,7 @@ EditText passwordVolunteer,idVolunteer;
         buttonBackSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentBackSignup=new Intent(SignUpVolunteerPage1.this,SignUpPage.class);
-                startActivity(intentBackSignup);
+               backToSignUp();
             }
         });
         EditTextTextPersonStudentIDVolunteer=findViewById(R.id.idVolunteer);
@@ -78,8 +77,7 @@ passwordVolunteer=findViewById(R.id.passwordVolunteer);
             public void onClick(View view) {
                 edit.putString("ID" , EditTextTextPersonStudentIDVolunteer.getText().toString());
                 edit.apply();
-               // Intent intentButtonNextSignUpVolunteerPage2=new Intent(SignUpVolunteerPage1.this,SignUpVolunteerPage2.class);
-              //  startActivity(intentButtonNextSignUpVolunteerPage2);
+
 
                 String id_Volunteer=idVolunteer.getText().toString();
                 String pass_Volunteer=passwordVolunteer.getText().toString();
@@ -107,7 +105,7 @@ passwordVolunteer=findViewById(R.id.passwordVolunteer);
                 else
                 {
 
-                    idVolunteer.setError("Pleass enter you id ");
+                    idVolunteer.setError("Please enter you id ");
 
                 }
 
@@ -116,15 +114,18 @@ passwordVolunteer=findViewById(R.id.passwordVolunteer);
         });
     }
 
-    public void radioGroupisChecked()
-    {
-       
 
-    }
     public void openDialog(String s)
     {
         Dialog Dia = new Dialog(s);
         Dia.show(getSupportFragmentManager(),"example dialog");
 
     }
+    public void backToSignUp()
+    {
+        Intent intentBackSignup=new Intent(SignUpVolunteerPage1.this,SignUpPage.class);
+        startActivity(intentBackSignup);
+    }
+
+
 }

@@ -20,7 +20,8 @@ public class LoginDisabled extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_disabled);
 
-       /* Password_Disabled=findViewById(R.id.Password_Disabled);
+       /* button login and required id & password
+       Password_Disabled=findViewById(R.id.Password_Disabled);
         id_Disabled=findViewById(R.id.id_Disabled);
 
         buttonLogInDisabled=findViewById(R.id.buttonLogInDisabled);
@@ -49,10 +50,14 @@ public class LoginDisabled extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intentSignUp =new Intent(LoginDisabled.this,SignUpPage.class);
-                startActivity(intentSignUp);
+               openSignUp();
 
             }
         });
+    }
+    public void openSignUp()
+    {
+        Intent intentSignUp =new Intent(LoginDisabled.this,SignUpPage.class);
+        startActivity(intentSignUp);
     }
 }

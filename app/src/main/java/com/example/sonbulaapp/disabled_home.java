@@ -44,11 +44,11 @@ public class disabled_home extends AppCompatActivity {
 
 
 
-        scheduleMeeting = (Button) findViewById(R.id.btn_scheduleMeeting);
+       /* scheduleMeeting = (Button) findViewById(R.id.btn_scheduleMeeting);
         scheduleMeeting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openScheduleMeeting();}
-        });
+        });*/
 
 
 
@@ -68,7 +68,7 @@ public class disabled_home extends AppCompatActivity {
 
 
 
-        archive  = (ImageButton) findViewById(R.id.btn_archive);
+       /* archive  = (ImageButton) findViewById(R.id.btn_archive);
         archive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openArchive();}
@@ -79,14 +79,14 @@ public class disabled_home extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openSettings();}
-        });
+        });*/
 
 
 
     }
     public void openInstantHelp()
     {
-        Intent intent = new Intent(disabled_home.this, editDisabledProfile.class);
+        Intent intent = new Intent(disabled_home.this, instant_help.class);
         startActivity(intent);
     }
 

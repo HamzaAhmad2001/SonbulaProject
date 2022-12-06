@@ -24,8 +24,7 @@ private ImageButton btn_ProfileVolunteer;
         btn_EditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentbtn_editProfile=new Intent(SettingPage.this,EditProfile.class);
-                startActivity(intentbtn_editProfile);
+                openEditProfile();
             }
         });
 
@@ -33,8 +32,7 @@ private ImageButton btn_ProfileVolunteer;
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentButtonLogout=new Intent(SettingPage.this,LogOutPage.class);
-                startActivity(intentButtonLogout);
+                openLogOutPage();
             }
         });
 
@@ -42,10 +40,24 @@ private ImageButton btn_ProfileVolunteer;
         btn_ProfileVolunteer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentBtn_ProfileVolunteer=new Intent(SettingPage.this,ProfileVolunteer.class);
-                startActivity(intentBtn_ProfileVolunteer);
+                openProfileVolunteer();
             }
         });
 
+    }
+    public void openEditProfile()
+    {
+        Intent intentbtn_editProfile=new Intent(SettingPage.this,EditProfile.class);
+        startActivity(intentbtn_editProfile);
+    }
+    public void openLogOutPage()
+    {
+        Intent intentButtonLogout=new Intent(SettingPage.this,LogOutPage.class);
+        startActivity(intentButtonLogout);
+    }
+    public void openProfileVolunteer()
+    {
+        Intent intentBtn_ProfileVolunteer=new Intent(SettingPage.this,ProfileVolunteer.class);
+        startActivity(intentBtn_ProfileVolunteer);
     }
 }

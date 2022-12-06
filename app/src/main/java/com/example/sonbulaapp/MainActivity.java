@@ -18,30 +18,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         buttonSignup=findViewById(R.id.buttonSignUp);
         buttonSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSignUpPage();
+
+                openSignUp();
             }
-            public void openSignUpPage()
-            {
-                Intent intent = new Intent(MainActivity.this,SignUpPage.class);
-                startActivity(intent);
-            }
+
         });
 
         textViewLogin=findViewById(R.id.textViewLogIn);
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLogIn =new Intent(MainActivity.this,LogInPage.class);
-                startActivity(intentLogIn);
+
+                openLogIn();
 
             }
         });
 
     }
 
-
+     public void openSignUp()
+    {
+        Intent intent = new Intent(MainActivity.this,SignUpPage.class);
+        startActivity(intent);
+    }
+    public void openLogIn()
+    {
+        Intent intentLogIn =new Intent(MainActivity.this,LogInPage.class);
+        startActivity(intentLogIn);
+    }
 }

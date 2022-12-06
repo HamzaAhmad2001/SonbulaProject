@@ -26,7 +26,7 @@
         android:contentDescription="Log in"
         android:text="Log in"
         android:textAlignment="center"
-        android:textColor="#3884A7"
+        android:textColor="#47A8A8"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

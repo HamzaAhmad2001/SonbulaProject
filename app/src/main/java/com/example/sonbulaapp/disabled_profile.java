@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +27,13 @@ public class disabled_profile extends AppCompatActivity {
     private ImageButton settings;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disabled_profile);
+
+
 
         edit = (Button) findViewById(R.id.btn_edit);
         edit.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +59,7 @@ public class disabled_profile extends AppCompatActivity {
 
 
 
-        archive  = (ImageButton) findViewById(R.id.btn_archive);
+      /*  archive  = (ImageButton) findViewById(R.id.btn_archive);
         archive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openArchive();}
@@ -66,7 +71,7 @@ public class disabled_profile extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openSettings();}
-        });
+        });*/
 
 
 
