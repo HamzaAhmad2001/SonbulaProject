@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/needsList_card"
+        android:layout_marginStart="@dimen/schedule_item_marginStart"
+        android:layout_width="@dimen/needsList_cardWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/schedule_item_marginTop"
+        android:elevation="@dimen/schedule_card_elevation"
+        app:cardCornerRadius="@dimen/schedule_card_cornerRadius">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:padding="@dimen/needsList_cardItems_padding">
+
+            <CheckBox
+                android:id="@+id/arabic_reader_chk"
+                android:text="@string/arabic_reader_need"
+                android:textSize="@dimen/needsList_textSize" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="@dimen/needsList_cardItems_padding"
+                android:src="@drawable/reading" />
+             <Button
+                 android:textAllCaps="false"
+                 android:id="@+id/arabic_reader_btn_details"
+                 android:text="Details"
+                 />
+
+            <CheckBox
+                android:id="@+id/arabic_writer_chk"
+                android:text="@string/arabic_writer_need"
+                android:textSize="@dimen/needsList_textSize" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="@dimen/needsList_cardItems_padding"
+                android:src="@drawable/writing" />
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/arabic_writer_btn_details"
+                android:text="Details"
+                />
+
+            <CheckBox
+                android:id="@+id/english_reader_chk"
+                android:text="@string/english_reader_need"
+                android:textSize="@dimen/needsList_textSize" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="@dimen/needsList_cardItems_padding"
+                android:src="@drawable/reading" />
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/english_reader_btn_details"
+                android:text="Details"
+                />
+
+            <CheckBox
+                android:id="@+id/english_writer_chk"
+                android:text="@string/english_writer_need"
+                android:textSize="@dimen/needsList_textSize" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="@dimen/needsList_cardItems_padding"
+                android:src="@drawable/writing" />
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/english_writer_btn_details"
+                android:text="Details"
+                />
+            <CheckBox
+                android:id="@+id/helpmate_chk"
+                android:text="@string/helpmate"
+                android:textSize="@dimen/needsList_textSize" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:padding="@dimen/needsList_cardItems_padding"
+                android:src="@drawable/wheelchair" />
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/helpmate_btn_details"
+                android:text="Details"
+                />
+
+
+        </GridLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

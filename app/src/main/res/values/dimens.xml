@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="schedule_item_marginStart">15dp</dimen>
+  <dimen name="schedule_item_marginTop">30dp</dimen>
+  <dimen name="schedule_item_width">340dp</dimen>
+  <dimen name="schedule_card_elevation">60dp</dimen>
+  <dimen name="schedule_card_cornerRadius">15dp</dimen>
+  <dimen name="needsList_textSize">20sp</dimen>
+  <dimen name="needsList_cardWidth">380sp</dimen>
+  <dimen name="needsList_cardItems_padding">4dp</dimen>
+
+
+
+
+    
+</resources>
