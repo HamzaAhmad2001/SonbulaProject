@@ -29,6 +29,7 @@ private TextView ed_id;
 SharedPreferences sp;
 
 ImageButton btn_Setting;
+ImageButton btn_Home;
 
 
 
@@ -48,6 +49,7 @@ ImageButton btn_Setting;
 
         btn_editProfile=findViewById(R.id.btn_editProfile);
 
+
         this.btn_editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +64,15 @@ ImageButton btn_Setting;
             public void onClick(View view) {
                 Intent intentbtn_setting=new Intent(ProfileVolunteer.this,SettingPage.class);
                 startActivity(intentbtn_setting);
+            }
+        });
+
+        btn_Home=findViewById(R.id.btn_home);
+        btn_Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentt=new Intent(getApplicationContext(),HomeVolunteer.class);
+                startActivity(intentt);
             }
         });
 
