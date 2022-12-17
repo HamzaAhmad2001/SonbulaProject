@@ -5,20 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.List;
-import android.os.Bundle;
 
 public class instant_help extends AppCompatActivity {
 
@@ -56,13 +48,13 @@ public class instant_help extends AppCompatActivity {
         });
 
 
-        profile = (ImageButton) findViewById(R.id.btn_profile);
+        profile = (ImageButton) findViewById(R.id.buttom_bar_btn_profile);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openProfile();}
         });
 
-        home = (ImageButton) findViewById(R.id.btn_home);
+        home = (ImageButton) findViewById(R.id.buttom_bar_btn_home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openHome();}
