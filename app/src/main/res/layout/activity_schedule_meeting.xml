@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleMeetingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/schedule_meeting_place"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="@dimen/schedule_item_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_marginTop="@dimen/schedule_item_marginTop"
+            android:contentDescription="Select place"
+            android:hint="@string/schedule_meeting_place"
+            app:startIconDrawable="@drawable/ic_baseline_schedule_place"
+
+            app:startIconTint="@color/main"
+
+            >
+
+            <AutoCompleteTextView
+
+                android:id="@+id/schedule_meeting_fill_place"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat"
+                android:inputType="none">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/schedule_meeting_card_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_meeting_place"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_marginTop="@dimen/schedule_item_marginTop"
+            android:elevation="45dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/schedule_meeting_date"
+                android:layout_width="@dimen/schedule_item_width"
+                android:layout_height="wrap_content"
+                android:contentDescription="select Date"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="@string/schedule_meeting_date"
+                android:padding="10dp"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_baseline_schedule_calendar" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/schedule_meeting_card_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_meeting_card_date"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_marginTop="@dimen/schedule_item_marginTop"
+            android:elevation="45dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/schedule_meeting_time"
+                android:layout_width="@dimen/schedule_item_width"
+                android:layout_height="wrap_content"
+                android:contentDescription="select Time"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/montserrat"
+                android:hint="@string/schedule_meeting_time"
+                android:padding="10dp"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_baseline_schedule_time" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/schedule_meeting_card_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_meeting_card_time"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_marginTop="@dimen/schedule_item_marginTop"
+            android:elevation="45dp"
+            app:cardCornerRadius="10dp">
+
+            <EditText
+                android:id="@+id/schedule_meeting_et_description"
+                android:layout_width="@dimen/schedule_item_width"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_schedule_description"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="top"
+                android:hint="@string/schedule_meeting_description"
+                android:inputType="textMultiLine"
+
+                android:lines="6" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/schedule_meeting_tv_needs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_meeting_card_description"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_marginTop="@dimen/schedule_item_marginTop"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/schedule_meeting_needs"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/schedule_meeting_tv_needsTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_meeting_tv_needs"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/schedule_meeting_needsTip"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/schedule_needsList_card"
+            android:layout_below="@id/schedule_meeting_tv_needsTip"
+            android:layout_marginStart="@dimen/schedule_item_marginStart"
+            android:layout_width="@dimen/needsList_cardWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/schedule_item_marginTop"
+            android:elevation="@dimen/schedule_card_elevation"
+            app:cardCornerRadius="@dimen/schedule_card_cornerRadius">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="3"
+                android:padding="@dimen/needsList_cardItems_padding">
+
+                <CheckBox
+                    android:id="@+id/schedule_arabic_reader_chk"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/arabic_reader_need"
+                    android:textSize="@dimen/needsList_textSize" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="@dimen/needsList_cardItems_padding"
+                    android:src="@drawable/reading" />
+
+                <Button
+                    android:id="@+id/schedule_arabic_reader_btn_details"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Details"
+                    android:textAllCaps="false" />
+
+                <CheckBox
+                    android:id="@+id/schedule_arabic_writer_chk"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/arabic_writer_need"
+                    android:textSize="@dimen/needsList_textSize" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="@dimen/needsList_cardItems_padding"
+                    android:src="@drawable/writing" />
+
+                <Button
+                    android:id="@+id/schedule_arabic_writer_btn_details"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Details"
+                    android:textAllCaps="false" />
+
+                <CheckBox
+                    android:id="@+id/schedule_english_reader_chk"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/english_reader_need"
+                    android:textSize="@dimen/needsList_textSize" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="@dimen/needsList_cardItems_padding"
+                    android:src="@drawable/reading" />
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/schedule_english_reader_btn_details"
+                    android:text="Details"
+                    />
+
+                <CheckBox
+                    android:id="@+id/schedule_english_writer_chk"
+                    android:text="@string/english_writer_need"
+                    android:textSize="@dimen/needsList_textSize" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="@dimen/needsList_cardItems_padding"
+                    android:src="@drawable/writing" />
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/schedule_english_writer_btn_details"
+                    android:text="Details"
+                    />
+                <CheckBox
+                    android:id="@+id/schedule_helpmate_chk"
+                    android:text="@string/helpmate"
+                    android:textSize="@dimen/needsList_textSize" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:padding="@dimen/needsList_cardItems_padding"
+                    android:src="@drawable/wheelchair" />
+                <Button
+                    android:textAllCaps="false"
+                    android:id="@+id/schedule_helpmate_btn_details"
+                    android:text="Details"
+                    />
+
+
+            </GridLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <LinearLayout
+            android:layout_width="@dimen/needsList_cardWidth"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/schedule_needsList_card"
+            android:layout_marginTop="@dimen/schedule_item_marginTop">
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/schedule_cancel_btn"
+                android:layout_width="@dimen/schedule_item_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/schedule_item_marginStart"
+                android:text="Cancel"
+                android:textSize="@dimen/needsList_textSize"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/schedule_post_btn"
+                android:layout_width="@dimen/schedule_item_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/schedule_item_marginStart"
+                android:text="Post"
+                android:textSize="@dimen/needsList_textSize"
+                android:layout_weight="1"
+                />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+
+
+
