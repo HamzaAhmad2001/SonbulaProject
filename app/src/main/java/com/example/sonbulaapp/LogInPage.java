@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LogInPageActivity extends AppCompatActivity {
+public class LogInPage extends AppCompatActivity {
     private Button buttonBacktoWelcome;
     TextView textViewSignup;
     Button btnVolunteer;
@@ -19,7 +19,7 @@ public class LogInPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_page);
-       buttonBacktoWelcome=findViewById(R.id.buttonBackWelcome);
+        buttonBacktoWelcome=findViewById(R.id.buttonBackToWelcome);
         buttonBacktoWelcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +30,7 @@ public class LogInPageActivity extends AppCompatActivity {
                 backToWelcome();
             }
         });
-        textViewSignup = findViewById(R.id.goToSignupPage);
+        textViewSignup = findViewById(R.id.textViewSignUp);
         textViewSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +44,7 @@ public class LogInPageActivity extends AppCompatActivity {
                openLogInVolunteer();
             }
         });
-        btnDisabled=findViewById(R.id.buttonDisableLoginAs);
+        btnDisabled=findViewById(R.id.Disabled);
         btnDisabled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,22 +55,22 @@ public class LogInPageActivity extends AppCompatActivity {
     }
     public void backToWelcome()
     {
-        Intent intent = new Intent(LogInPageActivity.this,MainActivity.class);
+        Intent intent = new Intent(LogInPage.this,MainActivity.class);
         startActivity(intent);
     }
     public void openSignUp()
     {
-        Intent intentSignUp =new Intent(LogInPageActivity.this, SignUpPageActivity.class);
+        Intent intentSignUp =new Intent(LogInPage.this,SignUpPage.class);
         startActivity(intentSignUp);
     }
     public void openLogInVolunteer()
     {
-        Intent intentVolunteer =new Intent(LogInPageActivity.this, LoginVolunteerActivity.class);
+        Intent intentVolunteer =new Intent(LogInPage.this,LoginVolunteer.class);
         startActivity(intentVolunteer);
     }
     public void openLogInDisabled()
     {
-        Intent intentDisabled =new Intent(LogInPageActivity.this, LoginDisabledActivity.class);
+        Intent intentDisabled =new Intent(LogInPage.this,LoginDisabled.class);
         startActivity(intentDisabled);
     }
 

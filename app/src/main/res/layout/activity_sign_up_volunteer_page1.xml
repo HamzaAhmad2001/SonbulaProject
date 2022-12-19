@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpVolunteerPage1Activity">
+    tools:context=".SignUpVolunteerPage1">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,12 +17,12 @@
         app:srcCompat="@drawable/logo1" />
 
     <Button
-        android:id="@+id/signup_volunteer_back_btn1"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/buttonBackSignUp"
+        android:layout_width="59dp"
+        android:layout_height="50dp"
 
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="?attr/actionModeCloseDrawable"
         android:backgroundTint="#3884A7"
         android:contentDescription="back "
@@ -32,28 +32,26 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="390dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:contentDescription="Fill In Your Information "
-        android:fontFamily="@font/montserrat"
         android:text="Fill In Your Information "
         android:textAlignment="center"
         android:textColor="#3884A7"
-        android:textSize="30sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_back_btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonBackSignUp" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="Use ID and Password that you are using to enter yuor university Portal."
-        android:fontFamily="@font/montserrat"
         android:text="Use ID and Password that you are using to enter yuor university Portal."
         android:textColor="#000000"
         android:textSize="20sp"
@@ -65,27 +63,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
         android:contentDescription="Student ID"
-        android:fontFamily="@font/montserrat"
         android:text="Student ID:"
         android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.053" />
-
-    <TextView
-        android:id="@+id/requiredStudentIDVolunteer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="*"
-        android:fontFamily="@font/montserrat"
-        android:text="*"
-        android:textColor="#E81A1A"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,10 +76,11 @@
         android:id="@+id/idVolunteer"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="Enter your Student id "
         android:ems="10"
-        android:hint="University Portal ID"
+        android:hint="1937517"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/textStudentIDVolunteer"
         app:layout_constraintTop_toBottomOf="@+id/textStudentIDVolunteer" />
@@ -109,54 +90,77 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="Pasword"
-        android:fontFamily="@font/montserrat"
         android:text="Pasword:"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idVolunteer" />
 
-    <TextView
-        android:id="@+id/requiredPaswordVolunteer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="35dp"
-        android:contentDescription="*"
-        android:fontFamily="@font/montserrat"
-        android:text="*"
-        android:textColor="#E81A1A"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idVolunteer" />
-
-
     <EditText
         android:id="@+id/passwordVolunteer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="40dp"
         android:contentDescription="Enter your Pasword"
         android:ems="10"
-        android:hint="University Portal Password"
+        android:hint="0000"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textPaswordVolunteer"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPaswordVolunteer" />
 
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Gender"
+        android:text="Gender:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordVolunteer" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupMFD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Male"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Female"
+            android:text="Female" />
+    </RadioGroup>
 
     <Button
-        android:id="@+id/buttonNextSignUpVolunteerPage1"
+        android:id="@+id/buttonNextSignUpVolunteerPage2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/color_raduis"
         android:contentDescription="Next"
-        android:fontFamily="@font/montserrat"
         android:text="Next"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"

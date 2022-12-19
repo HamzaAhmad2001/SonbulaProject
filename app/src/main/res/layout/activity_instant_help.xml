@@ -5,255 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/instantHelp_needs_list"
-        android:layout_width="380dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/view1_design"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/needs2"
-        app:layout_constraintTop_toBottomOf="@+id/needs2">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="380dp"
-            android:layout_height="300dp">
-
-            <Button
-                android:id="@+id/btn_DetailsSignLanguage"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:background="#47A8A8"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsHelpmate"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_signLanguage_chk" />
-
-            <CheckBox
-                android:id="@+id/instantHelp_signLanguage_chk"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="25dp"
-                android:contentDescription="Sign Language Interpreter"
-                android:fontFamily="@font/montserrat"
-                android:minHeight="48dp"
-                android:text="Sign Language Interpreter"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/instantHelp_helpmate_chk"
-                app:layout_constraintTop_toBottomOf="@+id/instantHelp_helpmate_chk"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <CheckBox
-                android:id="@+id/instantHelp_englishReader_chk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-
-                android:contentDescription="English Reader"
-                android:fontFamily="@font/montserrat"
-                android:text="English Reader"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/instantHelp_arabicReader_chk"
-                app:layout_constraintTop_toBottomOf="@+id/instantHelp_arabicWriter_chk" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="36dp"
-                android:layout_height="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView11"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsArabicWriter"
-                app:layout_constraintHorizontal_bias="0.558"
-                app:layout_constraintStart_toEndOf="@+id/instantHelp_arabicWriter_chk"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_arabicWriter_chk"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/hand" />
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="37dp"
-                android:layout_height="33dp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView7"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsArabicReader"
-                app:layout_constraintHorizontal_bias="0.508"
-                app:layout_constraintStart_toEndOf="@+id/instantHelp_arabicReader_chk"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_arabicReader_chk"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/reading" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="38dp"
-                android:layout_height="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView6"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsEnglishWriter"
-                app:layout_constraintStart_toEndOf="@+id/instantHelp_englishWriter_chk"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_englishWriter_chk"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/hand" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="36dp"
-                android:layout_height="27dp"
-                android:layout_marginTop="4dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsHelpmate"
-                app:layout_constraintHorizontal_bias="0.717"
-                app:layout_constraintStart_toEndOf="@+id/instantHelp_helpmate_chk"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_helpmate_chk"
-                app:srcCompat="@drawable/weel" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="36dp"
-                android:layout_height="31dp"
-
-                android:layout_marginBottom="11dp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView8"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsEnglishReader"
-                app:layout_constraintHorizontal_bias="0.387"
-                app:layout_constraintStart_toEndOf="@+id/instantHelp_englishReader_chk"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_englishReader_chk"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/reading" />
-
-            <CheckBox
-                android:id="@+id/instantHelp_arabicWriter_chk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:contentDescription="Arabic Writer"
-                android:fontFamily="@font/montserrat"
-                android:text="Arabic Writer"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/instantHelp_arabicReader_chk"
-                app:layout_constraintTop_toBottomOf="@+id/instantHelp_arabicReader_chk" />
-
-            <CheckBox
-                android:id="@+id/instantHelp_englishWriter_chk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:contentDescription="English Writer"
-                android:fontFamily="@font/montserrat"
-                android:text="English Writer"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/instantHelp_englishReader_chk"
-                app:layout_constraintTop_toBottomOf="@+id/instantHelp_englishReader_chk" />
-
-            <CheckBox
-                android:id="@+id/instantHelp_helpmate_chk"
-                android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="Helpmate"
-                android:fontFamily="@font/montserrat"
-                android:minHeight="48dp"
-                android:text="Helpmate"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/instantHelp_englishWriter_chk"
-                app:layout_constraintTop_toBottomOf="@+id/instantHelp_englishWriter_chk" />
-
-            <CheckBox
-                android:id="@+id/instantHelp_arabicReader_chk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:contentDescription="Arabic Reader"
-                android:fontFamily="@font/montserrat"
-                android:text="Arabic Reader"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btn_DetailsArabicReader"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="20dp"
-                android:background="#47A8A8"
-                android:contentDescription="button details reading in english"
-                android:fontFamily="@font/montserrat"
-
-                android:text="Details"
-                android:textColor="#F8F8F8"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_arabicReader_chk" />
-
-            <Button
-                android:id="@+id/btn_DetailsEnglishReader"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:background="#47A8A8"
-                android:contentDescription="button details reading in arabic"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsArabicWriter"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_englishReader_chk" />
-
-            <Button
-                android:id="@+id/btn_DetailsEnglishWriter"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-
-                android:background="#47A8A8"
-                android:contentDescription="button detals being a helmate"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsEnglishReader"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_englishWriter_chk" />
-
-            <Button
-                android:id="@+id/btn_DetailsArabicWriter"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:background="#47A8A8"
-                android:contentDescription="button details read in english"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsArabicReader"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_arabicWriter_chk" />
-
-            <Button
-                android:id="@+id/btn_DetailsHelpmate"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:background="#47A8A8"
-                android:contentDescription="button detalis writing in english"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsEnglishWriter"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_helpmate_chk" />
-
-            <ImageView
-                android:id="@+id/imageView22"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
-                app:layout_constraintBottom_toBottomOf="@+id/instantHelp_signLanguage_chk"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsSignLanguage"
-                app:layout_constraintStart_toEndOf="@+id/instantHelp_signLanguage_chk"
-                app:layout_constraintTop_toTopOf="@+id/instantHelp_signLanguage_chk"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/sign" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="62dp"
@@ -273,7 +24,7 @@
         android:id="@+id/instant_help"
         android:layout_width="151dp"
         android:layout_height="30dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="76dp"
 
         android:backgroundTint="#FFFFFFFF"
@@ -281,9 +32,9 @@
         android:fontFamily="@font/montserrat"
         android:gravity="start|left"
         android:text="Instant Help"
-        android:textColor="#47A8A8"
+        android:textColor="#0A0B0B"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
@@ -293,50 +44,80 @@
         android:id="@+id/placeList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
         android:text="Place List"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/instant_help"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instant_help" />
 
     <Spinner
         android:id="@+id/selectPlace"
         style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
         android:layout_width="280dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/select_place_design"
         android:entries="@array/places"
         android:splitMotionEvents="true"
         android:transitionGroup="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/placeList"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/placeList" />
 
+    <TextView
+        android:id="@+id/anyDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Any Descriptions?"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:background="@drawable/description_box_design"
+        android:fontFamily="@font/montserrat"
+        android:hint="Type Here..."
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anyDescription"
+        app:layout_constraintVertical_bias="0.192" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="417dp"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findVolunteerButton">
+        app:layout_constraintTop_toBottomOf="@+id/nextButton">
 
         <ImageButton
             android:id="@+id/btn_profile"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
             android:onClick="onClick"
+            android:background="@color/white"
             app:srcCompat="@drawable/profile" />
 
         <ImageButton
@@ -344,8 +125,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
             android:onClick="onClick"
+            android:background="@color/white"
             app:srcCompat="@drawable/home" />
 
         <ImageButton
@@ -353,8 +134,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
             android:onClick="onClick"
+            android:background="@color/white"
             app:srcCompat="@drawable/downloads" />
 
         <ImageButton
@@ -362,49 +143,28 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white"
             android:onClick="onClick"
+            android:background="@color/white"
             app:srcCompat="@drawable/settings" />
 
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/needs2"
-        android:layout_width="151dp"
-        android:layout_height="30dp"
-
-        android:layout_marginTop="10dp"
-
-        android:backgroundTint="#FFFFFFFF"
-        android:fontFamily="@font/montserrat"
-        android:gravity="start|left"
-        android:text="Needs"
-        android:textColor="#0A0B0B"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/selectPlace"
-        app:layout_constraintTop_toBottomOf="@+id/selectPlace" />
-
     <Button
-        android:id="@+id/findVolunteerButton"
-        android:layout_width="300dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/buttons_design"
-        android:contentDescription="Find a Volunteer"
+        android:id="@+id/nextButton"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="611dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/color_raduis"
         android:fontFamily="@font/montserrat"
         android:onClick="onClick"
-        android:text="Find a Volunteer"
-        android:textAllCaps="false"
+        android:text="Next"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instantHelp_needs_list" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

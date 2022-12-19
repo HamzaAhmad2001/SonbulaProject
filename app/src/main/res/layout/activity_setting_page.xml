@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingPageVolunteerActivity">
+    tools:context=".SettingPage">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,64 +21,71 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="53dp"
         android:contentDescription="Setting"
-        android:fontFamily="@font/montserrat"
-        android:text="Settings"
-        android:textColor="#47A8A8"
-        android:textSize="32sp"
+        android:text="Setting"
+        android:textColor="#3884A7"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioButtonActiveStatus"
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="330dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="35dp"
-        android:contentDescription="Active Status"
-        android:fontFamily="@font/montserrat"
-        android:text="Active Status"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        android:layout_height="88dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <RadioButton
+            android:id="@+id/radioButtonActiveStatus"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="35dp"
+            android:contentDescription="Active  Status"
+            android:text="Active  Status"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/buttonLogout"
-        android:layout_width="300dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:background="@drawable/view1_design"
+        android:background="@color/white"
         android:contentDescription="Log out"
         android:drawableLeft="@drawable/logout"
-        android:fontFamily="@font/montserrat"
         android:text="Log out"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/radioButtonActiveStatus"
-        app:layout_constraintTop_toBottomOf="@+id/radioButtonActiveStatus" />
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Button
-        android:id="@+id/volunteer_settings_btn_editProfile"
-        android:layout_width="300dp"
+        android:id="@+id/btn_editProfile"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:background="@drawable/view1_design"
+        android:background="@color/white"
         android:contentDescription="Edit Profile"
         android:drawableLeft="@drawable/pencil"
-        android:fontFamily="@font/montserrat"
         android:text="Edit Profile"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonLogout"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogout" />
 
     <LinearLayout
@@ -90,7 +97,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/btn_profile"
+            android:id="@+id/btn_profileVolunteer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -99,7 +106,7 @@
             app:srcCompat="@drawable/profile" />
 
         <ImageButton
-            android:id="@+id/btn_home"
+            android:id="@+id/imageButton15"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -107,7 +114,7 @@
             app:srcCompat="@drawable/home" />
 
         <ImageButton
-            android:id="@+id/btn_archive"
+            android:id="@+id/imageButton12"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"

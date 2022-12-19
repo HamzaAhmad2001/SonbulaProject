@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="ExtraText">
+    android:textAlignment="gravity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -26,61 +26,79 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:srcCompat="@drawable/logo" />
 
-
-
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/actionModeCloseDrawable"
+        android:backgroundTint="#3884A7"
+        android:contentDescription="back"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-        android:id="@+id/disability_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
-        android:contentDescription="Disability Type"
+        android:id="@+id/needs"
+        android:layout_width="151dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="112dp"
+
+        android:backgroundTint="#FFFFFFFF"
+
         android:fontFamily="@font/montserrat"
-        android:text="Disability Type"
-        android:textColor="#070707"
+        android:gravity="start|left"
+        android:text="Needs"
+        android:textColor="#0A0B0B"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/description1"
-        android:layout_width="375dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="Select your disabiity type that you need volunteers for"
+        android:id="@+id/needsDescription1"
+        android:layout_width="357dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
-        android:text="Select your disabiity type that you need volunteers for ."
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/disability_type"
-        app:layout_constraintTop_toBottomOf="@+id/disability_type"
-        />
+        android:text="Select what do you need from your volunteer. (In this meeting)"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/needs"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/description2"
-        android:layout_width="366dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="Hint: Mobility and physical impariments means issues with movement,Deaf or Hard Hearing means issues with hearing your lecture, colleague"
+        android:id="@+id/needsDescription2"
+        android:layout_width="353dp"
+        android:layout_height="44dp"
+
         android:fontFamily="@font/montserrat"
-        android:text="Hint: Mobility and physical impariments means issues with movement,Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
-        android:textColor="#FF655E5E"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/description1"
-        app:layout_constraintTop_toBottomOf="@+id/description1" />
+        android:text="For example: if you are a good Arabic reader, then select the option Arabic Reader, etc."
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/needsDescription1" />
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="385dp"
         android:layout_height="268dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/view1_design"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description2">
+        app:layout_constraintTop_toBottomOf="@+id/needsDescription2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -92,10 +110,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
 
-                android:contentDescription="Deaf or Hard Hearing"
+                android:contentDescription="Reading in Englsh"
                 android:fontFamily="@font/montserrat"
-                android:text="Deaf or Hard Hearing"
-                android:textSize="18sp"
+                android:text="Reading in Englsh"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/chk_readingArabic"
                 app:layout_constraintTop_toBottomOf="@+id/chk_readingArabic" />
 
@@ -103,7 +121,6 @@
                 android:id="@+id/imageView7"
                 android:layout_width="36dp"
                 android:layout_height="32dp"
-                android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toStartOf="@+id/btn_DetailsWritingArb"
                 app:layout_constraintStart_toEndOf="@+id/chk_writingArabic"
                 app:layout_constraintTop_toTopOf="@+id/chk_writingArabic"
@@ -114,7 +131,6 @@
                 android:layout_width="37dp"
                 android:layout_height="33dp"
                 app:layout_constraintEnd_toStartOf="@+id/btn_DetailsReadingArb"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/chk_readingArabic"
                 app:layout_constraintTop_toTopOf="@+id/chk_readingArabic"
                 app:srcCompat="@drawable/reading" />
@@ -124,8 +140,18 @@
                 android:layout_width="38dp"
                 android:layout_height="32dp"
                 app:layout_constraintEnd_toStartOf="@+id/btn_DetailsWritingEng"
+                app:layout_constraintStart_toEndOf="@+id/chk_writingEnglish"
                 app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish"
                 app:srcCompat="@drawable/hand" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="36dp"
+                android:layout_height="27dp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsHelpMate"
+                app:layout_constraintStart_toEndOf="@+id/chk_helpmate"
+                app:layout_constraintTop_toTopOf="@+id/chk_helpmate"
+                app:srcCompat="@drawable/weel" />
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -134,6 +160,7 @@
                 android:layout_marginTop="4dp"
 
                 app:layout_constraintEnd_toStartOf="@+id/btn_DetailsReadingEng"
+                app:layout_constraintStart_toEndOf="@+id/chk_readingEnglish"
                 app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish"
                 app:srcCompat="@drawable/reading" />
 
@@ -142,10 +169,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:contentDescription="Vision Impariments"
+                android:contentDescription="Writing in Arabic"
                 android:fontFamily="@font/montserrat"
-                android:text="Vision Impariments"
-                android:textSize="18sp"
+                android:text="Writing in Arabic"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/chk_readingEnglish"
                 app:layout_constraintTop_toBottomOf="@+id/chk_readingEnglish" />
 
@@ -156,7 +183,7 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="Writing in English"
                 android:fontFamily="@font/montserrat"
-                android:text="Paralyzed"
+                android:text="Writing in English"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/chk_writingArabic"
                 app:layout_constraintTop_toBottomOf="@+id/chk_writingArabic" />
@@ -205,6 +232,21 @@
                 app:layout_constraintTop_toTopOf="@+id/chk_readingArabic" />
 
             <Button
+                android:id="@+id/btn_DetailsHelpMate"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="30dp"
+                android:background="#47A8A8"
+
+                android:contentDescription="button detals being a helmate"
+                android:fontFamily="@font/montserrat"
+                android:text="Details"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_helpmate" />
+
+            <Button
                 android:id="@+id/btn_DetailsWritingEng"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
@@ -219,107 +261,52 @@
                 app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish" />
 
             <CheckBox
+                android:id="@+id/chk_helpmate"
+                android:layout_width="210dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Being a helpmate"
+                android:fontFamily="@font/montserrat"
+                android:minHeight="48dp"
+                android:text="Being a helpmate"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/chk_writingEnglish"
+                app:layout_constraintTop_toBottomOf="@+id/chk_writingEnglish" />
+
+            <CheckBox
                 android:id="@+id/chk_readingArabic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:contentDescription="Mobility and physical impariments "
+                android:contentDescription="Reading in Arabic "
                 android:fontFamily="@font/montserrat"
-                android:text="Mobility and physical\nimpariments "
-                android:textSize="18sp"
+                android:text="Reading in Arabic "
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="240dp"
-        android:layout_height="30dp"
-
-        android:fontFamily="@font/montserrat"
-        android:text="Accept help from females"
-        app:layout_constraintBottom_toTopOf="@+id/btn_saveButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
-        app:layout_constraintVertical_bias="0.024" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="224dp"
-        android:layout_height="31dp"
-
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Accept help from males"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
     <Button
-        android:id="@+id/btn_saveButton"
-        android:layout_width="298dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="45dp"
+        android:id="@+id/findVolunteerButton"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/buttons_design"
-        android:drawableBottom="@drawable/buttons_design"
+        android:contentDescription="Find a Volunteer"
         android:fontFamily="@font/montserrat"
-        android:gravity="center"
         android:onClick="onClick"
-        android:text="Save Changes"
-        android:textColor="#E6E6E6"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
-
-    <Button
-        android:id="@+id/btn_cancelButton"
-        android:layout_width="298dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/buttons_design"
-        android:drawableBottom="@drawable/buttons_design"
-        android:gravity="center"
-        android:onClick="onClick"
-        android:text="Cancel"
-        android:textColor="#FFFFFFFF"
-        android:textSize="16sp"
+        android:text="Find a Volunteer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_saveButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/male"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toTopOf="@+id/checkBox4"
-        app:layout_constraintVertical_bias="0.392"
-        app:srcCompat="@drawable/male" />
-
-    <ImageView
-        android:id="@+id/female"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="219dp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
-        app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toTopOf="@+id/checkBox5"
-        app:srcCompat="@drawable/female" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,108 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpDisabledPage1Activity">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingTop="25dp"
+    android:paddingRight="35dp"
+    android:paddingBottom="35dp"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonBackWelcome"
-        android:layout_width="59dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="?attr/actionModeCloseDrawable"
-        android:backgroundTint="#3884A7"
-        android:contentDescription="back to welcome page"
-        android:textSize="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonDisableLoginAs"
-        android:layout_width="250dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="24dp"
-        android:layout_weight="1"
-        android:background="@drawable/color_raduis"
-        android:contentDescription="Disabled"
-        android:drawableLeft="@drawable/disabled"
-        android:fontFamily="@font/montserrat"
-        android:text="Disabled"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/buttonVolunteerLoginAs"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonVolunteerLoginAs"
-        app:layout_constraintTop_toBottomOf="@+id/buttonVolunteerLoginAs" />
-
-    <Button
-        android:id="@+id/buttonVolunteerLoginAs"
-        android:layout_width="250dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="200dp"
-        android:layout_weight="1"
-        android:background="@drawable/color_raduis"
-        android:contentDescription="Volunteer"
-        android:drawableLeft="@drawable/volunteer"
-        android:fontFamily="@font/montserrat"
-        android:text="Volunteer"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17"
-        app:layout_constraintVertical_bias="0.8" />
-
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="232dp"
-        android:layout_height="184dp"
-        android:layout_marginTop="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="-150dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDisableLoginAs"
-        app:layout_constraintVertical_bias="0.0">
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonBackToWelcome"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="7dp"
+            android:background="?attr/actionModeCloseDrawable"
+            android:backgroundTint="#3884A7"
+            android:contentDescription="back to welcome page"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:contentDescription="Snbula Application Logo"
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="-30dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/logo1" />
+
+    <TextView
+        android:contentDescription="Login as"
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:paddingTop="25dp"
+        android:text="Login as"
+        android:textAlignment="center"
+        android:textColor="#3884A7"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonVolunteerLoginAs"
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="Volunteer"
+        android:drawableLeft="@drawable/volunteer"
+        android:text="Volunteer"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Disabled"
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="Disabled"
+        android:drawableLeft="@drawable/disabled"
+        android:text="Disabled"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/dontHaveAcc"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:layout_weight="2"
-            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:contentDescription="Don't have account yet?"
             android:text="Don't have account yet?"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/goToSignupPage"
+            android:id="@+id/textViewSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:contentDescription="login"
-            android:fontFamily="@font/montserrat"
+            android:contentDescription="sign up"
             android:text="sign up"
             android:textAlignment="center"
             android:textColor="#0027FF"
             android:textSize="20sp" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

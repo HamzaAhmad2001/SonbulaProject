@@ -4,22 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 
-import java.util.ArrayList;
-
-public class SignUpDisabledPage2Activity extends AppCompatActivity {
-Button buttonBackSignupDisabledPage;
+public class SignUpDisabledPage2 extends AppCompatActivity {
+Button buttonBackSignupDisabledPage1;
 Button signup;
 
-    private CheckBox chk_physical;
-    private CheckBox chk_deaf;
     private CheckBox chk_vision;
-
+    private CheckBox chk_mobility;
+    private CheckBox chk_deaf;
+    private CheckBox chk_Paralyzed;
 
     private CheckBox chk_acceptHelpF;
     private CheckBox chk_acceptHelpM;
@@ -28,36 +26,29 @@ Button signup;
     Button btn_DetailsDeaf;
     Button btn_DetailsMobility;
 
-
-
-    public ArrayList<String> skillsArray = new ArrayList<>();
-
-    SharedPreferences.Editor edit;
-    SharedPreferences sp;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_disabled_page2);
-        chk_physical=findViewById(R.id.signup_disabled_chk_physical);
-        chk_deaf=findViewById(R.id.signup_disabled_chk_deaf);
-        chk_vision=findViewById(R.id.signup_disabled_chk_vision);
-
+        chk_deaf=findViewById(R.id.chk_deaf);
+        chk_mobility=findViewById(R.id.chk_mobility);
+        chk_vision=findViewById(R.id.chk_vision);
+        chk_Paralyzed=findViewById(R.id.chk_Paralyzed);
 
 
         chk_acceptHelpF=findViewById(R.id.chk_acceptHelpF);
         chk_acceptHelpM=findViewById(R.id.chk_acceptHelpM);
 
-        buttonBackSignupDisabledPage=findViewById(R.id.buttonBackSignUpDisabledPage2);
-        buttonBackSignupDisabledPage.setOnClickListener(new View.OnClickListener() {
+        buttonBackSignupDisabledPage1=findViewById(R.id.buttonBackSignUpDisabledPage1);
+        buttonBackSignupDisabledPage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                backToSignupDisabledPage1();
             }
         });
-        signup=findViewById(R.id.signup_disabled_btn_signup);
+        signup=findViewById(R.id.signUp);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,11 +84,9 @@ Button signup;
 
     }
 
-
-
     public boolean isCheckeed()
     {
-        if(chk_deaf.isChecked() || chk_physical.isChecked() || chk_vision.isChecked())
+        if(chk_deaf.isChecked() || chk_mobility.isChecked() || chk_vision.isChecked()||chk_Paralyzed.isChecked())
             return true;
 
         else
@@ -119,15 +108,16 @@ Button signup;
     }
     public void backToSignupDisabledPage1()
     {
-        Intent intentbuttonBackSignUpDisabledPage=new Intent(SignUpDisabledPage2Activity.this, SignUpDisabledPage1Activity.class);
-        startActivity(intentbuttonBackSignUpDisabledPage);
+        Intent intentbuttonBackSignUpDisabledPage1=new Intent(SignUpDisabledPage2.this,SignUpDisabledPage1.class);
+        startActivity(intentbuttonBackSignUpDisabledPage1);
     }
     public void openDisabledProfile()
     {
         if(isCheckeed() && isCheckeedHelp())
         {
-            Intent intent=new Intent(SignUpDisabledPage2Activity.this,DisabledProfileActivity.class);
-                   startActivity(intent);
+            Intent intentSuingUp=new Intent(SignUpDisabledPage2.this,disabled_profile.class);
+            startActivity(intentSuingUp);
+
         }
         else if(isCheckeed() )
             openDialog("Please check at least one accept help gender");

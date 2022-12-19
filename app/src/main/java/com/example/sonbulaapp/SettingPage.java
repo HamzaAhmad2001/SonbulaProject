@@ -9,10 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class SettingPageVolunteerActivity extends AppCompatActivity {
-Button btn_EditVolunteerProfile;
+public class SettingPage extends AppCompatActivity {
+Button btn_EditProfile;
 Button buttonLogout;
-private ImageButton btn_profile;
+private ImageButton btn_ProfileVolunteer;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -20,8 +20,8 @@ private ImageButton btn_profile;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_page);
 
-        btn_EditVolunteerProfile=findViewById(R.id.volunteer_settings_btn_editProfile);
-        btn_EditVolunteerProfile.setOnClickListener(new View.OnClickListener() {
+        btn_EditProfile=findViewById(R.id.btn_editProfile);
+        btn_EditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openEditProfile();
@@ -36,8 +36,8 @@ private ImageButton btn_profile;
             }
         });
 
-        btn_profile=(ImageButton) findViewById(R.id.btn_profile);
-        btn_profile.setOnClickListener(new View.OnClickListener() {
+        btn_ProfileVolunteer=(ImageButton) findViewById(R.id.btn_profileVolunteer);
+        btn_ProfileVolunteer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openProfileVolunteer();
@@ -47,17 +47,17 @@ private ImageButton btn_profile;
     }
     public void openEditProfile()
     {
-        Intent intentbtn_editProfile=new Intent(SettingPageVolunteerActivity.this, EditVolunteerProfileActivity.class);
+        Intent intentbtn_editProfile=new Intent(SettingPage.this,EditProfile.class);
         startActivity(intentbtn_editProfile);
     }
     public void openLogOutPage()
     {
-        Intent intentButtonLogout=new Intent(SettingPageVolunteerActivity.this, LogOutPageVoulnteerActivity.class);
+        Intent intentButtonLogout=new Intent(SettingPage.this,LogOutPage.class);
         startActivity(intentButtonLogout);
     }
     public void openProfileVolunteer()
     {
-        Intent intentBtn_ProfileVolunteer=new Intent(SettingPageVolunteerActivity.this, VolunteerProfileActivity.class);
+        Intent intentBtn_ProfileVolunteer=new Intent(SettingPage.this,ProfileVolunteer.class);
         startActivity(intentBtn_ProfileVolunteer);
     }
 }

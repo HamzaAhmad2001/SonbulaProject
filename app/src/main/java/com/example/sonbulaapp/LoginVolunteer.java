@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginVolunteerActivity extends AppCompatActivity {
+public class LoginVolunteer extends AppCompatActivity {
     TextView textViewSignupLV;
     Button buttonLogInVolunteer;
     EditText password_Volunteer,id_Volunteer;
@@ -65,7 +65,7 @@ public class LoginVolunteerActivity extends AppCompatActivity {
     }
     public void openSignUp()
     {
-        Intent intentSignUp =new Intent(LoginVolunteerActivity.this, SignUpPageActivity.class);
+        Intent intentSignUp =new Intent(LoginVolunteer.this,SignUpPage.class);
         startActivity(intentSignUp);
     }
 }

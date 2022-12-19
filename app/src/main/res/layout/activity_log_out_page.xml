@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogOutPageVoulnteerActivity">
+    tools:context=".LogOutPage">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/logo1" />
 
     <Button
-        android:id="@+id/setting_volunteer_btn_back"
+        android:id="@+id/buttonBackSetting"
         android:layout_width="40dp"
         android:layout_height="40dp"
 

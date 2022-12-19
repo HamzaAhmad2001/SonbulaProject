@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,136 +11,129 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SonbulaApp"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".LogOutPageDisabledActivity"
-            android:exported="false" >
+            android:name=".LogOutPage"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LogOutPageVoulnteerActivity"
-            android:exported="false" >
+            android:name=".SettingPage"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SettingPageVolunteerActivity"
-            android:exported="false" >
+            android:name=".SignUpVolunteerPage2"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SettingsPageDisabledActivity"
-            android:exported="false" >
+            android:name=".SignUpDisabledPage2"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpVolunteerPage2Activity"
-            android:exported="false" >
+            android:name=".SignUpDisabledPage1"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpDisabledPage2Activity"
-            android:exported="false" >
+            android:name=".disabled_profile"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpDisabledPage1Activity"
-            android:exported="false" >
+            android:name=".instantNeeds"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DisabledProfileActivity"
-            android:exported="false" >
+            android:name=".instant_help"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".InstantHelpActivity"
-            android:exported="false" >
+            android:name=".disabled_home"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DisabledHomeActivity"
-            android:exported="false" >
+            android:name=".editDisabledProfile"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EditDisabledProfileActivity"
-            android:exported="false" >
+            android:name=".SignUpVolunteerPage1"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpVolunteerPage1Activity"
-            android:exported="false" >
+            android:name=".LoginDisabled"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginDisabledActivity"
-            android:exported="false" >
+            android:name=".LoginVolunteer"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginVolunteerActivity"
-            android:exported="false" >
+            android:name=".LogInPage"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LogInPageActivity"
-            android:exported="false" >
+            android:name=".SignUpPage"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpPageActivity"
-            android:exported="false" >
+            android:name=".EditProfile"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EditVolunteerProfileActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".VolunteerProfileActivity"
-            android:exported="false" >
+            android:name=".ProfileVolunteer"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

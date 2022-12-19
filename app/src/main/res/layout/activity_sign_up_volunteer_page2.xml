@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpVolunteerPage2Activity">
+    tools:context=".SignUpVolunteerPage2">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -22,26 +22,24 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="?attr/actionModeCloseDrawable"
         android:backgroundTint="#3884A7"
         android:contentDescription="back "
         android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_signUp" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="68dp"
         android:contentDescription="Skills"
-        android:fontFamily="@font/montserrat"
         android:text="Skills"
-        android:textColor="#3884A7"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,284 +48,227 @@
         android:layout_width="378dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
         android:contentDescription="Select the skills that you feel you are mastering it.(How you can help)."
-        android:fontFamily="@font/montserrat"
         android:text="Select the skills that you feel you are mastering it.(How you can help)."
         android:textColor="#FF655E5E"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-
     <TextView
         android:id="@+id/textView25"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/montserrat"
-        android:text="For example: Choose Reading in Arabic, if you are a proficient Arabic reader."
+        android:layout_width="378dp"
+        android:layout_height="79dp"
+        android:text="For example: if you are a good Arabic reader, then select the option Reading in Arabic, etc."
         android:textColor="#FF655E5E"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
+
     <ScrollView
-        android:id="@+id/signup_volunteer_skills_list"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/view1_design"
-        app:layout_constraintEnd_toEndOf="@+id/textView25"
-        app:layout_constraintHorizontal_bias="0.51"
+        android:id="@+id/scrollView2"
+        android:layout_width="403dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btn_DetailsSignLanguage"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:background="#47A8A8"
-                android:contentDescription="Detals of being a helmate"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsHelpMate"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_signLanguage"
-                app:layout_constraintVertical_bias="0.0" />
+            android:layout_height="wrap_content">
 
             <CheckBox
-                android:id="@+id/signup_volunteer_chk_readingarab"
+                android:id="@+id/chk_readingEnglish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="Reading in Arabic "
-                android:fontFamily="@font/montserrat"
-                android:text="Reading in Arabic "
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <CheckBox
-                android:id="@+id/signup_volunteer_chk_readingEng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:contentDescription="Reading in Englsh"
-                android:fontFamily="@font/montserrat"
                 android:text="Reading in Englsh"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/signup_volunteer_chk_readingarab"
-                app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_chk_readingarab" />
+                app:layout_constraintStart_toStartOf="@+id/chk_readingArabic"
+                app:layout_constraintTop_toBottomOf="@+id/chk_readingArabic" />
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="38dp"
-                android:layout_height="32dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsWritingArabic"
-                app:layout_constraintHorizontal_bias="0.714"
-                app:layout_constraintStart_toEndOf="@+id/signup_volunteer_chk_writingArab"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_writingArab"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic"
                 app:srcCompat="@drawable/hand" />
 
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="37dp"
-                android:layout_height="33dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsReadingArabic"
-                app:layout_constraintStart_toEndOf="@+id/signup_volunteer_chk_readingarab"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_readingarab"
+                android:layout_height="38dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic"
                 app:srcCompat="@drawable/reading" />
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="38dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsWritingEng"
-                app:layout_constraintHorizontal_bias="0.578"
-                app:layout_constraintStart_toEndOf="@+id/signup_volunteer_chk_writingEng"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_writingEng"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="132dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish"
                 app:srcCompat="@drawable/hand" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="35dp"
-                android:layout_height="37dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsHelpMate"
-                app:layout_constraintStart_toEndOf="@+id/signup_volunteer_chk_helpmate"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_helpmate"
-                app:layout_constraintVertical_bias="0.0"
+                android:layout_width="37dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="132dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_helpmate"
                 app:srcCompat="@drawable/wheelchair" />
 
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="37dp"
-                android:layout_height="33dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsReadingEng"
-                app:layout_constraintStart_toEndOf="@+id/signup_volunteer_chk_readingEng"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_readingEng"
+                android:layout_height="38dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish"
                 app:srcCompat="@drawable/reading" />
 
             <CheckBox
-                android:id="@+id/signup_volunteer_chk_writingArab"
+                android:id="@+id/chk_writingArabic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:contentDescription="Writing in Arabic"
-                android:fontFamily="@font/montserrat"
                 android:text="Writing in Arabic"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/signup_volunteer_chk_readingEng"
-                app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_chk_readingEng" />
+                app:layout_constraintStart_toStartOf="@+id/chk_readingEnglish"
+                app:layout_constraintTop_toBottomOf="@+id/chk_readingEnglish" />
 
             <CheckBox
-                android:id="@+id/signup_volunteer_chk_writingEng"
+                android:id="@+id/chk_writingEnglish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:contentDescription="Writing in English"
-                android:fontFamily="@font/montserrat"
                 android:text="Writing in English"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/signup_volunteer_chk_writingArab"
-                app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_chk_writingArab" />
+                app:layout_constraintStart_toStartOf="@+id/chk_writingArabic"
+                app:layout_constraintTop_toBottomOf="@+id/chk_writingArabic" />
 
             <Button
-                android:id="@+id/btn_DetailsWritingArabic"
+                android:id="@+id/btn_DetailsWritingArb"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
                 android:background="#47A8A8"
                 android:contentDescription="Details of read in english"
-                android:fontFamily="@font/montserrat"
                 android:text="Details"
                 android:textColor="@color/white"
                 android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsReadingEng"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_writingArab" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic" />
 
             <Button
                 android:id="@+id/btn_DetailsReadingEng"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
                 android:background="#47A8A8"
                 android:contentDescription="Details reading in english"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsReadingArabic"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_readingEng" />
-
-            <Button
-                android:id="@+id/btn_DetailsReadingArabic"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="20dp"
-                android:background="#47A8A8"
-                android:contentDescription="Details of reading in arabic"
-                android:fontFamily="@font/montserrat"
                 android:text="Details"
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_readingarab" />
+                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish" />
+
+            <Button
+                android:id="@+id/btn_DetailsReadingArb"
+                android:layout_width="73dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
+                android:background="#47A8A8"
+                android:contentDescription="Details of reading in arabic"
+                android:text="Details"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic" />
 
             <Button
                 android:id="@+id/btn_DetailsHelpMate"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
                 android:background="#47A8A8"
                 android:contentDescription="Detals of being a helmate"
-                android:fontFamily="@font/montserrat"
                 android:text="Details"
                 android:textColor="@color/white"
                 android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsWritingEng"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_helpmate" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_helpmate" />
 
             <Button
                 android:id="@+id/btn_DetailsWritingEng"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
+                android:layout_marginEnd="40dp"
                 android:background="#47A8A8"
                 android:contentDescription="Detalis of writing in english"
-                android:fontFamily="@font/montserrat"
                 android:text="Details"
                 android:textColor="@color/white"
                 android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsWritingArabic"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_writingEng" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish" />
 
             <CheckBox
-                android:id="@+id/signup_volunteer_chk_helpmate"
-                android:layout_width="210dp"
-                android:layout_height="38dp"
-                android:layout_marginTop="10dp"
+                android:id="@+id/chk_helpmate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:contentDescription="Being a helmate"
-                android:fontFamily="@font/montserrat"
                 android:minHeight="48dp"
                 android:text="Being a helmate"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/signup_volunteer_chk_writingEng"
-                app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_chk_writingEng" />
+                app:layout_constraintStart_toStartOf="@+id/chk_writingEnglish"
+                app:layout_constraintTop_toBottomOf="@+id/chk_writingEnglish" />
 
             <CheckBox
-                android:id="@+id/signup_volunteer_chk_signLanguage"
-                android:layout_width="210dp"
+                android:id="@+id/chk_readingArabic"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="Sign Language Interpreter"
-                android:fontFamily="@font/montserrat"
-                android:minHeight="48dp"
-                android:text="Sign Language Interpreter"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="Reading in Arabic "
+                android:text="Reading in Arabic "
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/signup_volunteer_chk_helpmate"
-                app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_chk_helpmate" />
-
-            <ImageView
-                android:id="@+id/imageView21"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsSignLanguage"
-                app:layout_constraintStart_toEndOf="@+id/signup_volunteer_chk_signLanguage"
-                app:layout_constraintTop_toTopOf="@+id/signup_volunteer_chk_signLanguage"
-                app:srcCompat="@drawable/sign" />
-
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/signup_volunteer_btn_signup"
-        android:layout_width="338dp"
-        android:layout_height="50dp"
+        android:id="@+id/btn_signUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/buttons_design"
-        android:fontFamily="@font/montserrat"
+        android:layout_marginEnd="29dp"
+        android:background="@drawable/color_raduis"
+        android:contentDescription="Sign up"
         android:text="Sign up"
         android:textAllCaps="false"
-        android:textColor="#F8F5F5"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_volunteer_skills_list" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <!-- <Button
          android:id="@+id/buttonWritingEng"
