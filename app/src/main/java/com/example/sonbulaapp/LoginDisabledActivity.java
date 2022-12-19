@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginDisabled extends AppCompatActivity {
+public class LoginDisabledActivity extends AppCompatActivity {
     TextView textViewSignupLD;
     EditText Password_Disabled,id_Disabled;
     Button buttonLogInDisabled;
@@ -57,7 +57,7 @@ public class LoginDisabled extends AppCompatActivity {
     }
     public void openSignUp()
     {
-        Intent intentSignUp =new Intent(LoginDisabled.this,SignUpPage.class);
+        Intent intentSignUp =new Intent(LoginDisabledActivity.this, SignUpPageActivity.class);
         startActivity(intentSignUp);
     }
 }

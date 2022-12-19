@@ -27,19 +27,16 @@
         app:srcCompat="@drawable/logo" />
 
 
-
-
-
     <TextView
         android:id="@+id/disability_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="75dp"
         android:contentDescription="Disability Type"
         android:fontFamily="@font/montserrat"
         android:text="Disability Type"
-        android:textColor="#070707"
+        android:textColor="#3884A7"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,28 +50,29 @@
         android:contentDescription="Select your disabiity type that you need volunteers for"
         android:fontFamily="@font/montserrat"
         android:text="Select your disabiity type that you need volunteers for ."
-        android:textSize="20sp"
+        android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@+id/disability_type"
-        app:layout_constraintTop_toBottomOf="@+id/disability_type"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/disability_type" />
 
     <TextView
         android:id="@+id/description2"
         android:layout_width="366dp"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:contentDescription="Hint: Mobility and physical impariments means issues with movement,Deaf or Hard Hearing means issues with hearing your lecture, colleague"
+        android:contentDescription="Hint: Mobility and physical impariments means issues with movement"
         android:fontFamily="@font/montserrat"
-        android:text="Hint: Mobility and physical impariments means issues with movement,Deaf or Hard Hearing means issues with hearing your lecture, colleague..."
+        android:text="Hint: Mobility and physical impariments means issues with movement"
         android:textColor="#FF655E5E"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@+id/description1"
         app:layout_constraintTop_toBottomOf="@+id/description1" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="385dp"
-        android:layout_height="268dp"
+        android:id="@+id/editProfile_disablity_list"
+        android:layout_width="380dp"
+        android:layout_height="215dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/view1_design"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,10 +82,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="230dp">
 
             <CheckBox
-                android:id="@+id/chk_readingEnglish"
+                android:id="@+id/editProfile_disabled_chk_deaf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -96,90 +94,40 @@
                 android:fontFamily="@font/montserrat"
                 android:text="Deaf or Hard Hearing"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@+id/chk_readingArabic"
-                app:layout_constraintTop_toBottomOf="@+id/chk_readingArabic" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="36dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsWritingArb"
-                app:layout_constraintStart_toEndOf="@+id/chk_writingArabic"
-                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic"
-                app:srcCompat="@drawable/hand" />
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="37dp"
-                android:layout_height="33dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsReadingArb"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/chk_readingArabic"
-                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic"
-                app:srcCompat="@drawable/reading" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="38dp"
-                android:layout_height="32dp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsWritingEng"
-                app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish"
-                app:srcCompat="@drawable/hand" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="36dp"
-                android:layout_height="31dp"
-                android:layout_marginTop="4dp"
-
-                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsReadingEng"
-                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish"
-                app:srcCompat="@drawable/reading" />
+                app:layout_constraintStart_toStartOf="@+id/editProfile_disabled_chk_physical"
+                app:layout_constraintTop_toBottomOf="@+id/editProfile_disabled_chk_physical" />
 
             <CheckBox
-                android:id="@+id/chk_writingArabic"
+                android:id="@+id/editProfile_disabled_chk_vision"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
                 android:contentDescription="Vision Impariments"
                 android:fontFamily="@font/montserrat"
                 android:text="Vision Impariments"
                 android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="@+id/chk_readingEnglish"
-                app:layout_constraintTop_toBottomOf="@+id/chk_readingEnglish" />
-
-            <CheckBox
-                android:id="@+id/chk_writingEnglish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:contentDescription="Writing in English"
-                android:fontFamily="@font/montserrat"
-                android:text="Paralyzed"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/chk_writingArabic"
-                app:layout_constraintTop_toBottomOf="@+id/chk_writingArabic" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/editProfile_disabled_chk_deaf"
+                app:layout_constraintTop_toBottomOf="@+id/editProfile_disabled_chk_deaf" />
 
             <Button
-                android:id="@+id/btn_DetailsWritingArb"
+                android:id="@+id/btn_DetailsVision"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="30dp"
                 android:background="#47A8A8"
                 android:contentDescription="button details read in english"
                 android:fontFamily="@font/montserrat"
                 android:text="Details"
                 android:textColor="#FFFFFF"
                 android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/chk_writingArabic" />
+                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsPhysical"
+                app:layout_constraintTop_toTopOf="@+id/editProfile_disabled_chk_vision" />
 
             <Button
-                android:id="@+id/btn_DetailsReadingEng"
+                android:id="@+id/btn_DetailsDeaf"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="30dp"
                 android:background="#47A8A8"
                 android:contentDescription="button details reading in english"
                 android:fontFamily="@font/montserrat"
@@ -187,14 +135,14 @@
 
                 android:textColor="#F8F8F8"
                 android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/chk_readingEnglish" />
+                app:layout_constraintEnd_toEndOf="@+id/btn_DetailsPhysical"
+                app:layout_constraintTop_toTopOf="@+id/editProfile_disabled_chk_deaf" />
 
             <Button
-                android:id="@+id/btn_DetailsReadingArb"
+                android:id="@+id/btn_DetailsPhysical"
                 android:layout_width="73dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginEnd="20dp"
                 android:background="#47A8A8"
                 android:contentDescription="button details reading in arabic"
                 android:fontFamily="@font/montserrat"
@@ -202,34 +150,48 @@
                 android:textColor="#FFFFFF"
                 android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/chk_readingArabic" />
-
-            <Button
-                android:id="@+id/btn_DetailsWritingEng"
-                android:layout_width="73dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="30dp"
-                android:background="#47A8A8"
-                android:contentDescription="button detalis writing in english"
-                android:fontFamily="@font/montserrat"
-                android:text="Details"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/chk_writingEnglish" />
+                app:layout_constraintTop_toTopOf="@+id/editProfile_disabled_chk_physical" />
 
             <CheckBox
-                android:id="@+id/chk_readingArabic"
+                android:id="@+id/editProfile_disabled_chk_physical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:contentDescription="Mobility and physical impariments "
                 android:fontFamily="@font/montserrat"
                 android:text="Mobility and physical\nimpariments "
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="25dp"
+                android:layout_height="38dp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsDeaf"
+                app:layout_constraintStart_toEndOf="@+id/editProfile_disabled_chk_deaf"
+                app:layout_constraintTop_toTopOf="@+id/editProfile_disabled_chk_deaf"
+                app:srcCompat="@drawable/deaf" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="13dp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsVision"
+                app:layout_constraintStart_toEndOf="@+id/editProfile_disabled_chk_vision"
+                app:layout_constraintTop_toTopOf="@+id/editProfile_disabled_chk_vision"
+                app:srcCompat="@drawable/eye" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_DetailsPhysical"
+                app:layout_constraintStart_toEndOf="@+id/editProfile_disabled_chk_physical"
+                app:layout_constraintTop_toTopOf="@+id/editProfile_disabled_chk_physical"
+                app:srcCompat="@drawable/weel" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -240,33 +202,33 @@
         android:layout_width="240dp"
         android:layout_height="30dp"
 
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/montserrat"
         android:text="Accept help from females"
-        app:layout_constraintBottom_toTopOf="@+id/btn_saveButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="224dp"
         android:layout_height="31dp"
 
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/montserrat"
         android:text="Accept help from males"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editProfile_disablity_list"
+        app:layout_constraintTop_toBottomOf="@+id/editProfile_disablity_list" />
 
     <Button
-        android:id="@+id/btn_saveButton"
+        android:id="@+id/editprofile_disabled_btn_save"
         android:layout_width="298dp"
         android:layout_height="45dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/buttons_design"
         android:drawableBottom="@drawable/buttons_design"
         android:fontFamily="@font/montserrat"
@@ -278,10 +240,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
     <Button
-        android:id="@+id/btn_cancelButton"
+        android:id="@+id/editprofile_disabled_btn_cancel"
         android:layout_width="298dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
@@ -293,10 +255,9 @@
         android:textColor="#FFFFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_saveButton"
+        app:layout_constraintEnd_toEndOf="@+id/editprofile_disabled_btn_save"
+        app:layout_constraintStart_toStartOf="@+id/editprofile_disabled_btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/editprofile_disabled_btn_save"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -316,7 +277,9 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="219dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox5"
         app:layout_constraintStart_toStartOf="@+id/checkBox5"
         app:layout_constraintTop_toTopOf="@+id/checkBox5"
         app:srcCompat="@drawable/female" />

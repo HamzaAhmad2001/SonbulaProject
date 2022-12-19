@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">SonbulaApp</string>
-<string-array name="places">
-    <item>Select Place</item>
-    <item> Faculty of Information Technology</item>
-    <item>Faculty of Engineering</item>
-    <item>School of Science</item>
-    <item>Faculty of Buisness</item>
-    <item>Faculty of Medicine</item>
-    <item>Faculty of Pharmacy</item>
-    <item>Faculty of Nursing</item>
-    <item>Faculty of Political Sciences</item>
-    <item>ِAl Hussien Al-Bani</item>
-    <item>Al-Hareth</item>
-    <item>Zinc</item>
+    <string-array name="places">
+        <item>Select Place</item>
+        <item> Faculty of Information Technology</item>
+        <item>Faculty of Engineering</item>
+        <item>School of Science</item>
+        <item>Faculty of Buisness</item>
+        <item>Faculty of Medicine</item>
+        <item>Faculty of Pharmacy</item>
+        <item>Faculty of Nursing</item>
+        <item>Faculty of Political Sciences</item>
+        <item>ِAl Hussien Al-Bani</item>
+        <item>Al-Hareth</item>
+        <item>Zinc</item>
 
 
-</string-array>
+    </string-array>
 </resources>

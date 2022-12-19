@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/logo1" />
 
     <Button
-        android:id="@+id/setting_volunteer_btn_back"
+        android:id="@+id/setting_disabled_btn_back"
         android:layout_width="40dp"
         android:layout_height="40dp"
 

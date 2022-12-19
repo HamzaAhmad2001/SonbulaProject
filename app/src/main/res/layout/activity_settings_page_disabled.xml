@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButtonActiveStatus" />
 
     <Button
-        android:id="@+id/volunteer_settings_btn_editProfile"
+        android:id="@+id/disabled_setting_btn_editProfile"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"

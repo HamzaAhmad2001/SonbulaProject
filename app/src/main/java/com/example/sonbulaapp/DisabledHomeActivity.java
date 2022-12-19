@@ -8,20 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import androidx.recyclerview.widget.RecyclerView;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.List;
-import android.os.Bundle;
 
-public class disabled_home extends AppCompatActivity {
+public class DisabledHomeActivity extends AppCompatActivity {
      private Button instantHelp;
      private Button scheduleMeeting;
      private ImageButton profile;
@@ -72,51 +60,51 @@ public class disabled_home extends AppCompatActivity {
         archive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openArchive();}
-        });
+        });*/
 
 
         settings  = (ImageButton) findViewById(R.id.btn_settings);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openSettings();}
-        });*/
+        });
 
 
 
     }
     public void openInstantHelp()
     {
-        Intent intent = new Intent(disabled_home.this, instant_help.class);
+        Intent intent = new Intent(DisabledHomeActivity.this, InstantHelpActivity.class);
         startActivity(intent);
     }
 
     public void openScheduleMeeting()
     {
-        Intent intent = new Intent(disabled_home.this, /*schedle meeting صفحة مش موجودة*/editDisabledProfile.class);
+        Intent intent = new Intent(DisabledHomeActivity.this, /*schedle meeting صفحة مش موجودة*/EditDisabledProfileActivity.class);
         startActivity(intent);
     }
 
     public void openProfile()
     {
-        Intent intent = new Intent(disabled_home.this, disabled_profile.class);
+        Intent intent = new Intent(DisabledHomeActivity.this, DisabledProfileActivity.class);
         startActivity(intent);
     }
 
     public void openHome()
     {
-        Intent intent = new Intent(disabled_home.this, disabled_home.class);
+        Intent intent = new Intent(DisabledHomeActivity.this, DisabledHomeActivity.class);
         startActivity(intent);
     }
 
     public void openArchive()
     {
-        Intent intent = new Intent(disabled_home.this, /* Archive صفحة مش موجودة*/disabled_profile.class);
+        Intent intent = new Intent(DisabledHomeActivity.this, /* Archive صفحة مش موجودة*/DisabledProfileActivity.class);
         startActivity(intent);
     }
 
     public void openSettings()
     {
-        Intent intent = new Intent(disabled_home.this, /*صفحة مش موجودةSettings */disabled_profile.class);
+        Intent intent = new Intent(DisabledHomeActivity.this, SettingsPageDisabledActivity.class);
         startActivity(intent);
     }
 

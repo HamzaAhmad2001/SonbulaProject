@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button buttonSignup;
@@ -43,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
      public void openSignUp()
     {
-        Intent intent = new Intent(MainActivity.this,SignUpPage.class);
+        Intent intent = new Intent(MainActivity.this, SignUpPageActivity.class);
         startActivity(intent);
     }
     public void openLogIn()
     {
-        Intent intentLogIn =new Intent(MainActivity.this,LogInPage.class);
+        Intent intentLogIn =new Intent(MainActivity.this, LogInPageActivity.class);
         startActivity(intentLogIn);
     }
 }
