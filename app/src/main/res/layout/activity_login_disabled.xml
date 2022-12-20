@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".LoginVolunteer">
 
+    <TextView
+        android:id="@+id/requiredStudentID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="*"
+        android:fontFamily="@font/montserrat"
+        android:text="*"
+        android:textColor="#E81A1A"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_Disabled" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -19,86 +33,85 @@
         app:srcCompat="@drawable/logo1" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:contentDescription="Log in"
-        android:text="Log in"
-        android:textAlignment="center"
-        android:textColor="#47A8A8"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="Student ID"
+        android:fontFamily="@font/montserrat"
         android:text="Student ID:"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/requiredStudentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="*"
+        android:fontFamily="@font/montserrat"
+        android:text="*"
+        android:textColor="#E81A1A"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/id_Disabled"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:contentDescription="enter your student id"
         android:ems="10"
-        android:hint="1937517"
+        android:hint="University Portal ID"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="Password"
+        android:fontFamily="@font/montserrat"
         android:text="Password:"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/id_Disabled"
         app:layout_constraintTop_toBottomOf="@+id/id_Disabled" />
 
     <EditText
         android:id="@+id/Password_Disabled"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="6dp"
         android:contentDescription="enter your password"
         android:ems="10"
-        android:hint="0000"
+        android:hint="University Portal Password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
         android:id="@+id/buttonLogInDisabled"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/color_raduis"
         android:contentDescription="Log in"
+        android:fontFamily="@font/montserrat"
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/Password_Disabled"
-        app:layout_constraintTop_toBottomOf="@+id/Password_Disabled" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chk_Remember" />
 
     <TextView
         android:id="@+id/textView12"
@@ -108,6 +121,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="6dp"
         android:contentDescription="Don't have account yet"
+        android:fontFamily="@font/montserrat"
         android:text="Don't have account yet?"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -123,6 +137,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="Sign up"
+        android:fontFamily="@font/montserrat"
         android:text="Sign up"
         android:textColor="#0026FC"
         android:textSize="20sp"
@@ -134,13 +149,41 @@
         android:id="@+id/chk_Remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="Remember me"
+        android:fontFamily="@font/montserrat"
         android:text="Remember me"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Password_Disabled"
         app:layout_constraintTop_toBottomOf="@+id/Password_Disabled" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="49dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="376dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="600dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

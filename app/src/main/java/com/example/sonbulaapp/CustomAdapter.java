@@ -17,14 +17,14 @@ public class CustomAdapter extends ArrayAdapter<String> {
     private final Activity context;
 
     private final ArrayList<String> title;
-    private final ArrayList<String> description;
+    //private final ArrayList<String> description;
 
 
     public CustomAdapter(Activity context, ArrayList<String> title, ArrayList<String> description) {
         super(context,R.layout.customitem,title);
         this.context = context;
         this.title = title;
-        this.description = description;
+        //this.description = description;
     }
 
 
@@ -35,10 +35,10 @@ public class CustomAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.customitem, null , true);
 
         TextView titleText = rowView.findViewById(R.id.skillTitle);
-        TextView DescriptionText= rowView.findViewById(R.id.skillDescription);
+       // TextView DescriptionText= rowView.findViewById(R.id.skillDescription);
 
         titleText.setText(title.get(position));
-        DescriptionText.setText(description.get(position));
+       //DescriptionText.setText(description.get(position));
 
         return rowView;
 

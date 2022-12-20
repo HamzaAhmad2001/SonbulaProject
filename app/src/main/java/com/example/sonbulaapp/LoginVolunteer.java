@@ -65,7 +65,7 @@ public class LoginVolunteer extends AppCompatActivity {
     }
     public void openSignUp()
     {
-        Intent intentSignUp =new Intent(LoginVolunteer.this,SignUpPage.class);
+        Intent intentSignUp =new Intent(LoginVolunteer.this, SignUpPage.class);
         startActivity(intentSignUp);
     }
 }

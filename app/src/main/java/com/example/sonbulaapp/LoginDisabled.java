@@ -57,7 +57,7 @@ public class LoginDisabled extends AppCompatActivity {
     }
     public void openSignUp()
     {
-        Intent intentSignUp =new Intent(LoginDisabled.this,SignUpPage.class);
+        Intent intentSignUp =new Intent(LoginDisabled.this, SignUpPage.class);
         startActivity(intentSignUp);
     }
 }

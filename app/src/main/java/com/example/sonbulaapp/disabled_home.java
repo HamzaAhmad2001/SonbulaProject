@@ -40,7 +40,7 @@ public class disabled_home extends AppCompatActivity {
 
 
 
-        profile = (ImageButton) findViewById(R.id.buttom_bar_btn_profile);
+        profile = (ImageButton) findViewById(R.id.btn_profile);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openProfile();}
@@ -48,7 +48,7 @@ public class disabled_home extends AppCompatActivity {
 
 
 
-        home = (ImageButton) findViewById(R.id.buttom_bar_btn_home);
+        home = (ImageButton) findViewById(R.id.btn_home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openHome();}
@@ -60,14 +60,14 @@ public class disabled_home extends AppCompatActivity {
         archive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openArchive();}
-        });
+        });*/
 
 
         settings  = (ImageButton) findViewById(R.id.btn_settings);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openSettings();}
-        });*/
+        });
 
 
 
@@ -104,7 +104,7 @@ public class disabled_home extends AppCompatActivity {
 
     public void openSettings()
     {
-        Intent intent = new Intent(disabled_home.this, /*صفحة مش موجودةSettings */disabled_profile.class);
+        Intent intent = new Intent(disabled_home.this, SettingsPageDisabledActivity.class);
         startActivity(intent);
     }
 

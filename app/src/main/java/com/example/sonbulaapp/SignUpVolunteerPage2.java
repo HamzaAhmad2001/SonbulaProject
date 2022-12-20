@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -19,6 +18,8 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     private Button btn_writingArabic;
     private Button btn_writingEnglish;
     private Button btn_helpMate;
+    private Button btn_signLanguage;
+
 
 
     Button btn_DetailsReadingArb;
@@ -35,6 +36,8 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     private CheckBox chk_writingArabic;
     private CheckBox chk_writingEnglish;
     private CheckBox chk_helpMate;
+    private CheckBox chk_signLanguage;
+
 
     public ArrayList<String> skillsArray = new ArrayList<>();
 
@@ -54,12 +57,12 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
         buttonBackSignupVolunteerPage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentbuttonBackSignupVolunteerPage1=new Intent(SignUpVolunteerPage2.this,SignUpVolunteerPage1.class);
+                Intent intentbuttonBackSignupVolunteerPage1=new Intent(SignUpVolunteerPage2.this, SignUpVolunteerPage1.class);
                 startActivity(intentbuttonBackSignupVolunteerPage1);
             }
         });
 
-        btn_DetailsReadingArb=findViewById(R.id.btn_DetailsReadingArb);
+        btn_DetailsReadingArb=findViewById(R.id.btn_DetailsReadingArabic);
         btn_DetailsReadingArb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +76,7 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
                 openDialog("You are able to read English language in a good accent,voice and medium speed.");
             }
         });
-        btn_DetailsWritingArb=findViewById(R.id.btn_DetailsWritingArb);
+        btn_DetailsWritingArb=findViewById(R.id.btn_DetailsWritingArabic);
         btn_DetailsWritingArb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,24 +98,27 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
             }
         });
 
-        btn_readingArabic= (Button) findViewById(R.id.btn_DetailsReadingArb);
+        btn_readingArabic= (Button) findViewById(R.id.btn_DetailsReadingArabic);
         btn_readingEnglish= (Button)findViewById(R.id.btn_DetailsReadingEng);
-        btn_writingArabic=(Button)findViewById(R.id.btn_DetailsWritingArb);
+        btn_writingArabic=(Button)findViewById(R.id.btn_DetailsWritingArabic);
         btn_writingEnglish=(Button)findViewById(R.id.btn_DetailsWritingEng);
         btn_helpMate=(Button)findViewById(R.id.btn_DetailsHelpMate);
-        btn_signup=(Button) findViewById(R.id.btn_signUp);
+        btn_signLanguage= (Button)findViewById(R.id.btn_DetailsSignLanguage);
+        btn_signup=(Button) findViewById(R.id.signup_volunteer_btn_signup);
 
-        chk_readingArabic = (CheckBox) findViewById(R.id.chk_readingArabic);
-        chk_readingEnglish = (CheckBox) findViewById(R.id.chk_readingEnglish);
-        chk_writingArabic = (CheckBox) findViewById(R.id.chk_writingArabic);
-        chk_writingEnglish = (CheckBox) findViewById(R.id.chk_writingEnglish);
-        chk_helpMate = (CheckBox) findViewById(R.id.chk_helpmate);
+        chk_readingArabic = (CheckBox) findViewById(R.id.signup_volunteer_chk_readingarab);
+        chk_readingEnglish = (CheckBox) findViewById(R.id.signup_volunteer_chk_readingEng);
+        chk_writingArabic = (CheckBox) findViewById(R.id.signup_volunteer_chk_writingArab);
+        chk_writingEnglish = (CheckBox) findViewById(R.id.signup_volunteer_chk_writingEng);
+        chk_helpMate = (CheckBox) findViewById(R.id.signup_volunteer_chk_helpmate);
+        chk_signLanguage = (CheckBox) findViewById(R.id.signup_volunteer_chk_signLanguage);
 
         btn_readingArabic.setOnClickListener(this);
         btn_readingEnglish.setOnClickListener(this);
         btn_writingArabic.setOnClickListener(this);
         btn_writingEnglish.setOnClickListener(this);
         btn_helpMate.setOnClickListener(this);
+        btn_signLanguage.setOnClickListener(this);
 
 
         btn_signup.setOnClickListener(this);
@@ -134,7 +140,7 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.btn_signUp)
+        if(v.getId() == R.id.signup_volunteer_btn_signup)
         {
             if(isCheckeed())
             {
@@ -148,6 +154,8 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
                     skillsArray.add("Writing in English");
                 if(chk_helpMate.isChecked())
                     skillsArray.add("Being a helpmate");
+                if(chk_signLanguage.isChecked())
+                    skillsArray.add("Sign Language Interpreter");
 
 
                 // Toast.makeText(this,skillsArray.toString(),Toast.LENGTH_LONG).show();
@@ -179,14 +187,14 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
 
 
         switch(v.getId()) {
-            case R.id.btn_DetailsReadingArb:
+            case R.id.btn_DetailsReadingArabic:
                 openDialog("Reading Arabic with a clear voice, good accent, and medium speed");
                 break;
             case R.id.btn_DetailsReadingEng:
                 openDialog("Reading English with a clear voice, good accent, and medium speed");
                 break;
 
-            case R.id.btn_DetailsWritingArb :
+            case R.id.btn_DetailsWritingArabic:
                 openDialog("Clear handwriting in the Arabic language");
                 break;
 
@@ -197,13 +205,17 @@ public class SignUpVolunteerPage2 extends AppCompatActivity implements View.OnCl
             case R.id.btn_DetailsHelpMate :
                 openDialog("Helping the disabled transition between colleges");
                 break;
+
+            case R.id.btn_DetailsSignLanguage:
+                openDialog("Interpreting in sign language effectively");
+                break;
         }
 
 
     }
     public boolean isCheckeed()
     {
-        if(chk_readingArabic.isChecked() || chk_readingEnglish.isChecked() || chk_writingArabic.isChecked() ||chk_writingEnglish.isChecked() || chk_helpMate.isChecked()  )
+        if(chk_readingArabic.isChecked() || chk_readingEnglish.isChecked() || chk_writingArabic.isChecked() ||chk_writingEnglish.isChecked() || chk_helpMate.isChecked() || chk_signLanguage.isChecked() )
             return true;
 
         else

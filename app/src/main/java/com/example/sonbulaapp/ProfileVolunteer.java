@@ -1,25 +1,18 @@
 package com.example.sonbulaapp;
 
-import static android.preference.PreferenceManager.getDefaultSharedPreferences;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProfileVolunteer extends AppCompatActivity   {
 
@@ -27,9 +20,10 @@ public class ProfileVolunteer extends AppCompatActivity   {
 private Button btn_editProfile;
 private TextView ed_id;
 SharedPreferences sp;
-
+ImageButton btn_profile;
+ImageButton btn_home;
+ImageButton btn_archive;
 ImageButton btn_Setting;
-ImageButton btn_Home;
 
 
 
@@ -40,20 +34,19 @@ ImageButton btn_Home;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_volunteer);
 
-        ed_id=findViewById(R.id.ed_ID);
+        ed_id=findViewById(R.id.volunteer_profile_ed_ID);
         getID();
 
 
 
-        setSkillsList();
+        //setSkillsList();
 
         btn_editProfile=findViewById(R.id.btn_editProfile);
-
 
         this.btn_editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProfileVolunteer.this,EditProfile.class);
+                Intent intent = new Intent(ProfileVolunteer.this, EditProfile.class);
                 startActivity(intent);
             }
         });
@@ -62,20 +55,37 @@ ImageButton btn_Home;
         btn_Setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentbtn_setting=new Intent(ProfileVolunteer.this,SettingPage.class);
+                Intent intentbtn_setting=new Intent(ProfileVolunteer.this, SettingPage.class);
                 startActivity(intentbtn_setting);
             }
         });
 
-        btn_Home=findViewById(R.id.btn_home);
-        btn_Home.setOnClickListener(new View.OnClickListener() {
+        btn_profile=findViewById(R.id.btn_profile);
+        btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentt=new Intent(getApplicationContext(),HomeVolunteer.class);
-                startActivity(intentt);
+                Intent intentbtn_profile=new Intent(ProfileVolunteer.this, ProfileVolunteer.class);
+                startActivity(intentbtn_profile);
             }
         });
 
+      //  btn_home=findViewById(R.id.btn_home);
+        //btn_home.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View view) {
+              //  Intent intentbtn_home=new Intent(VolunteerProfileActivity.this,/*voulnter home*/VolunteerProfileActivity.class);
+                //startActivity(intentbtn_home);
+           // }
+        //});
+
+        btn_archive=findViewById(R.id.btn_archive);
+        btn_archive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentbtn_archive=new Intent(ProfileVolunteer.this,/*voulnter atchive*/SettingPage.class);
+                startActivity(intentbtn_archive);
+            }
+        });
 
     }
 
@@ -88,14 +98,14 @@ ImageButton btn_Home;
     public void setSkillsList(){
         Bundle bundle = getIntent().getExtras();
         ListView skillslist;
-        skillslist = findViewById(R.id.Skills_list);
+        skillslist = findViewById(R.id.Disabilities_list);
 
 
         ArrayList<String> skillsData = new ArrayList<>(0);
         ArrayList<String> skillsDescription = new ArrayList<>();
 
 
-        skillsData=bundle.getStringArrayList("stringarray");
+       // skillsData=bundle.getStringArrayList("stringarray");
 
         if(skillsData.size() >0 ) {
 

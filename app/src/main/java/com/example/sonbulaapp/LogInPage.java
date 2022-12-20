@@ -19,7 +19,7 @@ public class LogInPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_page);
-        buttonBacktoWelcome=findViewById(R.id.buttonBackToWelcome);
+       buttonBacktoWelcome=findViewById(R.id.buttonBackWelcome);
         buttonBacktoWelcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +30,7 @@ public class LogInPage extends AppCompatActivity {
                 backToWelcome();
             }
         });
-        textViewSignup = findViewById(R.id.textViewSignUp);
+        textViewSignup = findViewById(R.id.goToSignupPage);
         textViewSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +44,7 @@ public class LogInPage extends AppCompatActivity {
                openLogInVolunteer();
             }
         });
-        btnDisabled=findViewById(R.id.Disabled);
+        btnDisabled=findViewById(R.id.buttonDisableLoginAs);
         btnDisabled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,17 +60,17 @@ public class LogInPage extends AppCompatActivity {
     }
     public void openSignUp()
     {
-        Intent intentSignUp =new Intent(LogInPage.this,SignUpPage.class);
+        Intent intentSignUp =new Intent(LogInPage.this, SignUpPage.class);
         startActivity(intentSignUp);
     }
     public void openLogInVolunteer()
     {
-        Intent intentVolunteer =new Intent(LogInPage.this,LoginVolunteer.class);
+        Intent intentVolunteer =new Intent(LogInPage.this, LoginVolunteer.class);
         startActivity(intentVolunteer);
     }
     public void openLogInDisabled()
     {
-        Intent intentDisabled =new Intent(LogInPage.this,LoginDisabled.class);
+        Intent intentDisabled =new Intent(LogInPage.this, LoginDisabled.class);
         startActivity(intentDisabled);
     }
 
