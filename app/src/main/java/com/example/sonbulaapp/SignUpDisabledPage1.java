@@ -1,23 +1,16 @@
 package com.example.sonbulaapp;
 
-import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
 public class SignUpDisabledPage1 extends AppCompatActivity {
 Button buttonBackSignupDisabled;
 Button buttonNextSignupDisabledPage2;
-    RadioGroup radioGroupMFD;
-    RadioButton radioButton;
     boolean x=false;
     EditText passwordDisabled;
     EditText idDisabled;
@@ -26,7 +19,7 @@ Button buttonNextSignupDisabledPage2;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_disabled_page1);
-        buttonBackSignupDisabled=findViewById(R.id.buttonBackSignUpDisabled);
+        buttonBackSignupDisabled=findViewById(R.id.buttonBackSignUpDisabled1);
         buttonBackSignupDisabled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,26 +29,8 @@ Button buttonNextSignupDisabledPage2;
 
         passwordDisabled=findViewById(R.id.passwordDisabled);
         idDisabled=findViewById(R.id.idDisabled);
-        radioGroupMFD=(RadioGroup) findViewById(R.id.radioGroupMFD);
-        radioGroupMFD.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group,@IdRes int checkedId) {
-                radioButton=findViewById(checkedId);
-                switch (radioButton.getId())
-                {
 
-                    case R.id.radioButtonMaleD:
-                    {
-                        x=true;
-                    }
-                    case R.id.radioButtonFemaleD:
-                    {
-                        x=true;
-                    }
-                }
-            }
-        });
-        buttonNextSignupDisabledPage2=findViewById(R.id.buttonNextSignUpDisabledPage2);
+        buttonNextSignupDisabledPage2=findViewById(R.id.buttonNextSignUpDisabledPage1);
         buttonNextSignupDisabledPage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +47,7 @@ Button buttonNextSignupDisabledPage2;
     }
     public void backToSignUppPage()
     {
-        Intent intentButtonBackSignUpDisabled=new Intent(SignUpDisabledPage1.this,SignUpPage.class);
+        Intent intentButtonBackSignUpDisabled=new Intent(SignUpDisabledPage1.this, SignUpPage.class);
         startActivity(intentButtonBackSignUpDisabled);
     }
     public void openSignUpDisabledPage2()
@@ -80,30 +55,26 @@ Button buttonNextSignupDisabledPage2;
         String id_Disabled=idDisabled.getText().toString();
         String pass_Disabled=passwordDisabled.getText().toString();
 
-        if(id_Disabled.equals("1937517"))
+        if(id_Disabled.equals("1937517")|| id_Disabled.equals("1937549") )
         {
             if(pass_Disabled.equals("0000"))
             {
-                if(x)
-                {
-                    Intent intentButtonNextSignUpVolunteerPage2 = new Intent(SignUpDisabledPage1.this, SignUpDisabledPage2.class);
-                    startActivity(intentButtonNextSignUpVolunteerPage2);
-                }
-                {
-                    openDialog("Please enter your gender");
-                }
+
+                    Intent intentButtonNextSignUpDisabledPage2 = new Intent(SignUpDisabledPage1.this, SignUpDisabledPage2.class);
+                    startActivity(intentButtonNextSignUpDisabledPage2);
+
 
             }
             else
             {
-                passwordDisabled.setError("please enter you pass");
+                passwordDisabled.setError("Please enter you password");
             }
 
         }
         else
         {
 
-            idDisabled.setError("Pleass enter you id ");
+            idDisabled.setError("Please enter your university portal ID");
 
         }
 

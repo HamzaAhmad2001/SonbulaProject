@@ -14,11 +14,17 @@ import android.widget.Spinner;
 
 public class instant_help extends AppCompatActivity {
 
-    private Button next;
     private ImageButton profile;
     private ImageButton home;
     private ImageButton archive;
     private ImageButton settings;
+    private Button findVolunteer;
+    private Button btn_DetailsReadingArb;
+    private Button btn_DetailsReadingEng;
+    private Button btn_DetailsWritingArb;
+    private Button btn_DetailsWritingEng;
+    private Button btn_DetailsHelpMate;
+    private Button btn_DetailsSignLanguage;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,20 +47,63 @@ public class instant_help extends AppCompatActivity {
            }
        });
 
-        next = (Button) findViewById(R.id.nextButton);
-        next.setOnClickListener(new View.OnClickListener() {
+        findVolunteer = (Button) findViewById(R.id.findVolunteerButton);
+        findVolunteer.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { openInstantNeed();}
+            public void onClick(View view) { openFindingVolunteer();}
         });
 
+        btn_DetailsReadingArb=findViewById(R.id.btn_DetailsArabicReader);
+        btn_DetailsReadingArb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBtnDetailsReadingArb();
+            }
+        });
+        btn_DetailsReadingEng=findViewById(R.id.btn_DetailsEnglishReader);
+        btn_DetailsReadingEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBtnDetailsReadingEng();
+            }
+        });
+        btn_DetailsWritingArb=findViewById(R.id.btn_DetailsArabicWriter);
+        btn_DetailsWritingArb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBtnDetailsWritingArb();
+            }
+        });
+        btn_DetailsWritingEng=findViewById(R.id.btn_DetailsEnglishWriter);
+        btn_DetailsWritingEng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBtnDetailsWritingEng();
+            }
+        });
+        btn_DetailsHelpMate=findViewById(R.id.btn_DetailsHelpmate);
+        btn_DetailsHelpMate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBtnDetailsHelpMate();
+            }
+        });
 
-        profile = (ImageButton) findViewById(R.id.buttom_bar_btn_profile);
+        btn_DetailsSignLanguage=findViewById(R.id.btn_DetailsSignLanguage);
+        btn_DetailsSignLanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBtnDetailsSignLanguage();
+            }
+        });
+
+        profile = (ImageButton) findViewById(R.id.btn_profile);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openProfile();}
         });
 
-        home = (ImageButton) findViewById(R.id.buttom_bar_btn_home);
+        home = (ImageButton) findViewById(R.id.btn_home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openHome();}
@@ -64,20 +113,59 @@ public class instant_help extends AppCompatActivity {
         archive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openArchive();}
-        });
+        });*/
 
 
         settings  = (ImageButton) findViewById(R.id.btn_settings);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { openSettings();}
-        });*/
+        });
 
 
     }
+
+   public void openFindingVolunteer()
+    {
+        Intent intent = new Intent(instant_help.this, instant_help.class);
+        startActivity(intent);
+    }
+
+    public void openDialog(String s)
+    {
+        Dialog Dia = new Dialog(s);
+        Dia.show(getSupportFragmentManager(),"example dialog");
+
+    }
+    public void openBtnDetailsReadingArb()
+    {
+        openDialog("You need a volunteer to read Arabic. language in a good accent.voice and medium speed.");
+    }
+    public void openBtnDetailsReadingEng()
+    {
+        openDialog("You need a volunteer to read English language in a good accent.voice and medium speed.");
+    }
+    public void openBtnDetailsWritingArb()
+    {
+        openDialog("You need a good,clear Arabic language handwriter");
+    }
+    public void openBtnDetailsWritingEng()
+    {
+        openDialog("You need a good,clear English language handwriter");
+    }
+    public void openBtnDetailsHelpMate()
+    {
+        openDialog("You need a volunteer to help you in moving between colleges.");
+    }
+    public void openBtnDetailsSignLanguage()
+    {
+        openDialog("Interpreting in sign language effectively");
+    }
+
+
     public void openInstantNeed()
     {
-        Intent intent = new Intent(instant_help.this, instantNeeds.class);
+        Intent intent = new Intent(instant_help.this, instant_help.class);
         startActivity(intent);
     }
     public void openProfile()
@@ -99,7 +187,7 @@ public class instant_help extends AppCompatActivity {
     }
     public void openSettings()
     {
-        Intent intent = new Intent(instant_help.this, /*صفحة مش موجودةSettings */disabled_profile.class);
+        Intent intent = new Intent(instant_help.this, SettingPage.class);
         startActivity(intent);
     }
 
